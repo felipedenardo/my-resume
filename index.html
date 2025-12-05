@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="i18n-title">Felipe Gonçalves Denardo | Desenvolvedor Full Stack Sênior</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="antialiased py-10">
+
+    <div class="max-w-7xl mx-auto">
+        
+        <header class="bg-white shadow-sm rounded-xl p-8 mb-8 border-t-4 border-sky-600 relative text-gray-900">
+                        
+            <div class="absolute top-4 right-4">
+                <select id="lang-select" class="header-lang-select text-base font-semibold text-sky-700 pl-3 py-2 rounded-lg border border-sky-200">
+                    <option value="pt-BR">🇧🇷 Português</option>
+                    <option value="en-US">🇺🇸 English</option>
+                </select>
+            </div>
+            
+            <div class="flex flex-col items-center justify-center text-center mb-4">
+                
+                <!-- Foto de Perfil -->
+                <img id="profile-image" class="w-24 h-24 rounded-full mb-4 object-cover flex-shrink-0 border-2 border-gray-100" 
+                     src="" alt="Foto de Perfil">
+                
+                <!-- Nome e Cargo -->
+                <div class="flex flex-col items-center">
+                    <h1 id="profile-name" class="text-4xl lg:text-5xl font-extrabold tracking-tight text-gray-900 mb-3"></h1>
+                    <h2 id="profile-role" class="text-xl lg:text-2xl font-semibold text-sky-600 m-0"></h2>
+                </div>
+            </div>
+
+            <div class="w-full h-px bg-gray-200 my-4"></div>
+
+            <div id="contact-container" class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-gray-600">
+                <!-- Contatos injetados via JS -->
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <!-- SIDEBAR -->
+            <aside class="lg:col-span-4 space-y-8">
+                <section class="bg-white shadow-sm rounded-xl p-6">
+                    <h3 id="resume-title" class="section-title text-2xl"></h3>
+                    <p id="resume-text" class="text-gray-700 leading-relaxed text-lg"></p>
+                </section>
+
+                <section class="bg-white shadow-sm rounded-xl p-6">
+                    <h3 id="skills-title" class="section-title text-xl"></h3>
+                    <div id="skills-container" class="space-y-4">
+                        <!-- Skills injetadas via JS -->
+                    </div>                  
+                </section>
+
+                <section class="bg-white shadow-sm rounded-xl p-6">
+                    <h3 id="education-title" class="section-title text-xl"></h3>
+                    <div id="education-container">
+                        <!-- Educação injetada via JS -->
+                    </div>
+                    <div class="pt-4 border-t border-gray-100">
+                        <p id="languages-title" class="font-bold text-gray-900 mb-2 text-sm uppercase tracking-wider"></p>
+                        <ul id="languages-list" class="space-y-1 text-gray-700 text-base list-disc list-inside">
+                            <!-- Idiomas injetados via JS -->
+                        </ul>
+                    </div>
+                </section>
+            </aside>
+
+            <!-- MAIN CONTENT -->
+            <main class="lg:col-span-8 space-y-8">
+                <section class="bg-white shadow-sm rounded-xl p-6">
+                    <h3 id="diff-title" class="section-title text-2xl"></h3>
+                    <p id="diff-text" class="text-gray-700 leading-relaxed text-lg"></p>
+                </section>
+
+                <section class="bg-white shadow-sm rounded-xl p-6">
+                    <h3 id="experience-title" class="section-title text-xl"></h3>
+                    <div id="experience-container">
+                        <!-- Experiências injetadas via JS -->
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <footer class="mt-12 pt-8 border-t border-gray-200 text-center text-sm text-gray-500 pb-8">
+            <p id="footer-text"></p>
+        </footer>
+    </div>
+
+   <script src="script.js"></script>
+</body>
+</html>
