@@ -197,8 +197,7 @@ function renderPage(lang) {
 
     const contactContainer = document.getElementById('contact-container');
     contactContainer.innerHTML = '';
-    profileData.contacts.forEach((c, index) => {
-        const separator = index < profileData.contacts.length - 1 ? '<span class="text-gray-400"> • </span>' : '';
+    profileData.contacts.forEach((c, index) => {        
         let html = '';
         if(c.type === 'link' || c.type === 'email') {
             const href = c.type === 'email' ? `mailto:${c.value}` : c.value;
@@ -206,7 +205,7 @@ function renderPage(lang) {
         } else {
             html = `<p class="flex items-center">${icons[c.icon]}<span>${c.value}</span></p>`;
         }
-        contactContainer.innerHTML += html + separator;
+        contactContainer.innerHTML += html;
     });
 
     document.getElementById('resume-title').textContent = data.titles.resume;
