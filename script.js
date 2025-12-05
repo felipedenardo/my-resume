@@ -17,13 +17,13 @@ const contentData = {
             skills: "Stack de Habilidades",
             education: "Educação & Idiomas",
             languages: "Idiomas",
-            diff: "Diferenciais Técnicos & Performance",
+            diff: "Diferenciais Técnicos",
             experience: "Experiência Profissional"
         },
         text: {
             resume: "Desenvolvedor Full Stack Sênior com mais de 8 anos de experiência e forte especialização em Golang e Java. Focado na entrega de software de alta qualidade (Clean Code), possuo sólida vivência na construção de Micro APIs, modelagem de dados complexos e evolução de sistemas legados.",
             diff: "Experiência comprovada na entrega de soluções de alta performance e na resolução de gargalos críticos, aplicando estratégias como caching com Redis, tuning de performance em bancos relacionais, refatoração de algoritmos e arquiteturas de mensageria com RabbitMQ para processamento assíncrono e escalabilidade. Atuo em todo o ciclo de desenvolvimento, colaborando com times de produto para transformar requisitos de negócio em soluções técnicas eficientes.",
-            footer: "&copy; 2024 Felipe Gonçalves Denardo | Desenvolvido com Clean Code e performance."
+            footer: "&copy; 2024 Felipe Gonçalves Denardo"
         },
         education: [
             { degree: "Sistemas de Informação", school: "Unibrasil", period: "2013 – 2018" }
@@ -56,8 +56,8 @@ const contentData = {
                 company: "BRQ Digital Solutions",
                 stack: "Java, Spring, JSF, Angular, MySQL, AWS S3, Git.",
                 details: [
-                    "<strong>Unicesumar:</strong> Desenvolvimento do portal do aluno (Studeo) com Java e Angular. Implementação de módulos acadêmicos e gestão de atividades.",
-                    "<strong>Bradesco:</strong> Manutenção de aplicações corporativas (Java/JSF), garantindo conformidade com regras financeiras."
+                    "<strong>Unicesumar:</strong> Atuação Full Stack no desenvolvimento do portal do aluno (Studeo), integrando Back-end (Java) e Front-end (Angular). Responsável pela implementação de módulos acadêmicos, gestão de satividades, acompanhamento acadêmico e comunicação com tutores em um ambiente virtual e robusto.",
+                    "<strong>Bradesco:</strong> Manutenção e evolução de aplicações corporativas internas, com foco na melhoria do sistema legado. Atuação em Java/JSF, garantindo estabilidade e conformidade com regras de negócio financeiras."
                 ]
             },
             {
@@ -66,7 +66,7 @@ const contentData = {
                 company: "Velti Tecnologia",
                 stack: "Java, Spring, JSF, Angular, MySQL.",
                 details: [
-                    "Atuação no sistema de controle de ponto. Manutenção de código legado (Java/JSF) e migração para Angular."
+                    "<strong>Desenvolvimento e Modernização:</strong> Atuação Full Stack no sistema Velti Ponto (controle de ponto). Fui responsável pela manutenção e implementação de novas features no código legado (Java/JSF) e participei da fase inicial de migração do Front-end para Angular."
                 ]
             },
             {
@@ -75,7 +75,8 @@ const contentData = {
                 company: "MobileSys",
                 stack: "Java, Spring, JSF, MySQL.",
                 details: [
-                    "Implementação de funcionalidades no sistema TradePRO Promoter (Java/Spring/JSF). Modelagem de banco e otimização de queries."
+                    "<strong>Desenvolvimento Full Stack:</strong> Atuação Full Stack na implementação de novas funcionalidades e correção de bugs no sistema TradePRO Promoter (gestão de equipes externas), utilizando Java/Spring no Backend e JSF no Front-end.",
+                    "<strong>Dados e Contribuição:</strong> Colaborei na modelagem de banco de dados e otimização de queries, atuando no ciclo de dados desde a concepção até a entrega. Implementei relatórios complexos com Apache POI e desenvolvi módulos para coleta de dados em campo e execução de tarefas no ponto de venda."
                 ]
             },
             {
@@ -84,7 +85,8 @@ const contentData = {
                 company: "BRQ Digital Solutions",
                 stack: "Java, JavaScript.",
                 details: [
-                    "Curso intensivo de Desenvolvimento Web (Java e JavaScript)."
+                    "<strong>Capacitação e Formação:</strong> Conclusão de curso intensivo de Desenvolvimento Web de 3 meses, com foco em fundamentos de Java e JavaScript.",
+                    "<strong>Escopo::</strong> Período dedicado à formação técnica e à prontidão para suporte para equipes de desenvolvimento."
                 ]
             }
         ]
@@ -92,21 +94,21 @@ const contentData = {
     "en-US": {
         titles: {
             resume: "Professional Summary",
-            skills: "Skill Stack",
+            skills: "Skills Stack",
             education: "Education & Languages",
             languages: "Languages",
-            diff: "Technical Differentiators & Performance",
+            diff: "Technical Differentiators",
             experience: "Professional Experience"
         },
         text: {
-            resume: "Senior Full Stack Developer with over 8 years of experience and strong specialization in Golang and Java. Focused on delivering high-quality software (Clean Code), I possess solid experience in building Micro APIs, complex data modeling, and legacy system evolution.',",
+            resume: "Senior Full Stack Developer with over 8 years of experience and strong specialization in Golang and Java. Focused on delivering high-quality software (Clean Code), I possess solid experience in building Micro APIs, complex data modeling, and legacy system evolution.",
             diff: "Proven experience in delivering high-performance solutions and resolving critical bottlenecks, applying strategies such as Redis caching, relational database performance tuning, algorithm refactoring, and RabbitMQ messaging architectures for asynchronous processing and scalability. I operate throughout the entire development cycle, collaborating with product teams to translate business requirements into efficient technical solutions.",
-            footer: "&copy; 2024 Felipe Gonçalves Denardo | Developed with Clean Code and Performance."
+            footer: "&copy; 2024 Felipe Gonçalves Denardo"
         },
         education: [
             { degree: "Information Systems", school: "Unibrasil", period: "2013 – 2018" }
         ],
-        languages: ["Portuguese: Native", "English: Basic (A2) currently studying"],
+        languages: ["Portuguese: Native", "English: Basic (A2) - Currently studying"],
         skills: [
             { category: "Backend", items: ["Golang", "Java", "Spring Boot", "Hibernate", "Groovy/Grails", "REST APIs", "Microservices"] },
             { category: "Frontend", items: ["Vue.js", "Angular 2+", "TypeScript", "JavaScript", "JSF/PrimeFaces"] },
@@ -120,17 +122,53 @@ const contentData = {
                 company: "CWS Platform", 
                 stack: "Golang, Groovy/Grails, Vue.js, React, RabbitMQ, Redis, MySQL, PostgreSQL, Docker, AWS S3, Git.",
                 details: [
-                    "<strong>Backend & Micro APIs:</strong> Development and maintenance of microservices using Golang, focusing on low coupling and maintainability.",
-                    "<strong>Frontend & Integration:</strong> UI development using Vue.js and React, integrated with Micro APIs (Golang/Groovy).",
-                    "<strong>Architecture and Performance:</strong> Implementation of event-driven architectures and asynchronous processing (Jobs) using RabbitMQ and Redis, eliminating interface blockages and optimizing response time.",
-                    "<strong>Legacy Modernization:</strong> Refactoring of legacy modules to reduce technical debt.",
-                    "<strong>Data:</strong> Schema modeling and performance tuning in relational databases."
+                    "<strong>Backend & Micro APIs:</strong> Development and maintenance of microservices using Golang, focusing on low coupling, readability, and maintainability.",
+                    "<strong>Frontend & Integration:</strong> UI development using Vue.js and React. Responsible for integration and consumption of Micro APIs (Golang/Groovy) for the visualization layer.",
+                    "<strong>Architecture & Performance:</strong> Implementation of event-driven architectures and asynchronous processing (Jobs) using RabbitMQ and Redis, eliminating interface blockages and optimizing response times.",
+                    "<strong>Legacy Modernization:</strong> Technical role in refactoring legacy modules, rewriting inefficient logic to improve system performance and reduce technical debt.",
+                    "<strong>Data Modeling:</strong> Responsible for database schema analysis and modeling, ensuring integrity and query efficiency through tuning and indexing.",
+                    "<strong>Quality Assurance:</strong> Conducting Code Reviews to maintain code quality and best practices."
                 ]
             },
-            { role: "Mid-Level Full Stack Developer", period: "Jul/2018 - Feb/2020", company: "BRQ Digital Solutions", stack: "Java, Spring, JSF, Angular, MySQL, AWS S3, Git.", details: ["<strong>Unicesumar:</strong> Development of the student portal (Studeo) with Java and Angular.", "<strong>Bradesco:</strong> Maintenance of corporate applications (Java/JSF)."] },
-            { role: "Junior Full Stack Developer", period: "Mar/2018 – May/2018", company: "Velti Tecnologia", stack: "Java, Spring, JSF, Angular, MySQL.", details: ["Work on the time clock control system. Legacy code maintenance (Java/JSF) and migration to Angular."] },
-            { role: "Junior Full Stack Developer", period: "Sep/2016 – Feb/2018", company: "MobileSys", stack: "Java, Spring, JSF, MySQL.", details: ["Implementation of features in the TradePRO Promoter system (Java/Spring/JSF). Database modeling and query optimization."] },
-            { role: "Web Developer Intern", period: "Jun/2016 - Sep/2016", company: "BRQ Digital Solutions", stack: "Java, JavaScript.", details: ["Intensive Web Development course (Java and JavaScript)."] }
+            {
+                role: "Mid-Level Full Stack Developer",
+                period: "Jul/2018 - Feb/2020",
+                company: "BRQ Digital Solutions",
+                stack: "Java, Spring, JSF, Angular, MySQL, AWS S3, Git.",
+                details: [
+                    "<strong>Unicesumar:</strong> Full Stack role developing the student portal (Studeo), integrating Back-end (Java) and Front-end (Angular). Responsible for implementing academic modules, activity management, academic tracking, and communication with tutors in a robust virtual environment.",
+                    "<strong>Bradesco:</strong> Maintenance and evolution of internal corporate applications, focusing on legacy system improvement. Worked with Java/JSF, ensuring stability and compliance with financial business rules."
+                ]
+            },
+            {
+                role: "Junior Full Stack Developer",
+                period: "Mar/2018 – May/2018",
+                company: "Velti Tecnologia",
+                stack: "Java, Spring, JSF, Angular, MySQL.",
+                details: [
+                    "<strong>Development & Modernization:</strong> Full Stack role on the Velti Ponto system (time tracking). Responsible for maintenance and implementation of new features in legacy code (Java/JSF) and participated in the initial phase of Front-end migration to Angular."
+                ]
+            },
+            {
+                role: "Junior Full Stack Developer",
+                period: "Sep/2016 – Feb/2018",
+                company: "MobileSys",
+                stack: "Java, Spring, JSF, MySQL.",
+                details: [
+                    "<strong>Full Stack Development:</strong> Full Stack role implementing new features and fixing bugs in the TradePRO Promoter system (external team management), using Java/Spring on the Backend and JSF on the Frontend.",
+                    "<strong>Data & Contribution:</strong> Collaborated on database modeling and query optimization, working on the data cycle from conception to delivery. Implemented complex reports with Apache POI and developed modules for field data collection and POS task execution."
+                ]
+            },
+            {
+                role: "Web Developer Intern",
+                period: "Jun/2016 - Sep/2016",
+                company: "BRQ Digital Solutions",
+                stack: "Java, JavaScript.",
+                details: [
+                    "<strong>Training & Education:</strong> Completion of a 3-month intensive Web Development course, focusing on Java and JavaScript fundamentals.",
+                    "<strong>Scope:</strong> Period dedicated to technical training and readiness to support development teams."
+                ]
+            }
         ]
     }
 };
