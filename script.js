@@ -24,7 +24,7 @@ const contentData = {
             experience: "Experiência Profissional"
         },
         text: {
-            resume: "Senior Backend Engineer com mais de 8 anos de experiência, especializado em APIs, integrações e arquitetura de microsserviços. Forte atuação com Golang e Java, focado na entrega de software de alta qualidade (Clean Code), construção de micro APIs, modelagem de dados complexos e evolução de sistemas legados. Atuação contínua no suporte ao desenvolvimento front-end, garantindo integração eficiente entre interface e backend.",
+            resume: "Engenheiro Backend Sênior com mais de 8 anos de experiência, especializado em APIs, integrações e arquitetura de microsserviços. Forte atuação com Golang e Java, focado na entrega de software de alta qualidade (Clean Code), construção de APIs e microsserviços, modelagem de dados complexos e evolução de sistemas legados. Atuação contínua no suporte ao desenvolvimento front-end, garantindo integração eficiente entre interface e backend.",
             diff: "Experiência comprovada na entrega de soluções de alta performance e na resolução de gargalos críticos, aplicando estratégias como cache com Redis, tuning de performance em bancos relacionais, refatoração de algoritmos e arquiteturas de mensageria com RabbitMQ para processamento assíncrono e escalabilidade. Atuação em todo o ciclo de desenvolvimento, colaborando com times de produto na tradução de requisitos de negócio em soluções técnicas eficientes.",
             footer: "&copy; 2024 Felipe Gonçalves Denardo"
         },
@@ -108,7 +108,7 @@ const contentData = {
             experience: "Professional Experience"
         },
         text: {
-            resume: "Engenheiro Backend Sênior com mais de 8 anos de experiência, especializado em APIs, integrações e arquitetura de microsserviços. Forte atuação com Golang e Java, focado na entrega de software de alta qualidade (Clean Code), construção de micro APIs, modelagem de dados complexos e evolução de sistemas legados. Atuação contínua no suporte ao desenvolvimento front-end, garantindo integração eficiente entre interface e backend.",
+            resume: "Senior Backend Engineer with over 8 years of experience, specializing in APIs, integrations, and microservices architecture. Strong background in Golang and Java, focused on delivering high-quality software following Clean Code principles. Continuous experience providing frontend support, ensuring efficient integration between frontend interfaces and backend services.",
             diff: "Proven experience delivering high-performance solutions through Redis caching, database tuning, algorithm refactoring, and RabbitMQ-based asynchronous architectures.",
             footer: "&copy; 2024 Felipe Gonçalves Denardo"
         },
