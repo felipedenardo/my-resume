@@ -1,8 +1,8 @@
 const profileData = {
     name: "Felipe Gonçalves Denardo",
     role: { 
-        "pt-BR": "Engenheiro Backend Sênior | APIs & Integrações | Microsserviços",
-        "en-US": "Senior Backend Engineer | APIs & Integrations | Microservices" 
+        "pt-BR": "Engenheiro Backend Sênior | APIs & Integrações | Microsserviços | Full Stack",
+        "en-US": "Senior Backend Engineer | APIs & Integrations | Microservices | Full Stack" 
     },            
     photoUrl: "", 
     contacts: [
