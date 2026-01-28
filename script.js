@@ -34,7 +34,7 @@ const contentData = {
         languages: ["Português: Nativo", "Inglês: Básico em estudo (A2)"],
         skills: [
             { category: "Backend", items: ["Golang", "Java", "Spring Boot", "Hibernate", "Groovy/Grails", "APIs REST", "Microsserviços"] },
-            { category: "Frontend (Suporte)", items: ["Vue.js", "Angular 2+", "TypeScript", "JavaScript", "JSF/PrimeFaces"] },
+            { category: "Frontend", items: ["Vue.js", "Angular 2+", "TypeScript", "JavaScript", "JSF/PrimeFaces"] },
             { category: "Dados & Infra", items: ["PostgreSQL", "MySQL", "SQL Server", "Redis", "RabbitMQ", "Docker", "AWS S3", "Linux", "Git"] },
             { category: "Práticas", items: ["Clean Code", "Scrum", "Kanban", "Modelagem de Dados", "Tuning"] }
         ],
@@ -117,7 +117,7 @@ const contentData = {
         languages: ["Portuguese: Native", "English: Basic - Currently studying (A2)"],
         skills: [
             { category: "Backend", items: ["Golang", "Java", "Spring Boot", "Hibernate", "Groovy/Grails", "REST APIs", "Microservices"] },
-            { category: "Frontend (Support)", items: ["Vue.js", "Angular 2+", "TypeScript", "JavaScript", "JSF/PrimeFaces"] },
+            { category: "Frontend", items: ["Vue.js", "Angular 2+", "TypeScript", "JavaScript", "JSF/PrimeFaces"] },
             { category: "Data & Infra", items: ["PostgreSQL", "MySQL", "SQL Server", "Redis", "RabbitMQ", "Docker", "AWS S3", "Linux", "Git"] },
             { category: "Practices", items: ["Clean Code", "Scrum", "Kanban", "Data Modeling", "Tuning"] }
         ],
