@@ -24,7 +24,7 @@ const contentData = {
             experience: "Experiência Profissional"
         },
         text: {
-            resume: "Senior Backend Engineer com mais de 8 anos de experiência na construção de sistemas distribuídos e arquitetura de microsserviços. Especialista em Golang e Java, com foco em soluções de alta disponibilidade e Clean Code. Sólida vivência em Arquitetura Hexagonal (Ports & Adapters), garantindo testabilidade e evolução sustentável de sistemas complexos e legados. Experiência complementar em Front-end, assegurando a entrega de integrações eficientes de ponta a ponta.",
+            resume: "<strong>Senior Backend Engineer</strong> com mais de 8 anos de experiência na construção de sistemas distribuídos e arquitetura de microsserviços. Especialista em <strong>Golang</strong> e <strong>Java</strong>, com foco em soluções de alta disponibilidade e Clean Code. Sólida vivência em <strong>Arquitetura Hexagonal</strong> (Ports & Adapters), garantindo testabilidade e evolução sustentável de sistemas complexos e legados. Experiência complementar em <strong>frontend</strong>, assegurando a entrega de integrações eficientes de ponta a ponta.",
             diff: "<strong>Performance e Otimização:</strong> Histórico comprovado na resolução de gargalos críticos, alcançando reduções de até 80% no tempo de resposta de APIs. Especialista em tuning de queries, implementação estratégica de cache com Redis e otimização de payloads via DTOs, garantindo alta eficiência no tráfego de dados.\n\n<strong>Arquitetura de Eventos:</strong> Definição e implementação de mensageria com RabbitMQ para processamento assíncrono e desacoplamento de serviços.\n\n<strong>Visão de Produto:</strong> Atuação estratégica junto a stakeholders para traduzir requisitos de negócio em arquiteturas técnicas robustas, escaláveis e de fácil manutenção.",
             footer: "&copy; 2024 Felipe Gonçalves Denardo"
         },
@@ -46,11 +46,11 @@ const contentData = {
                 company: "CWS Platform",
                 stack: "Golang (GORM), Groovy/Grails, MySQL, Redis, RabbitMQ, Docker, AWS S3, Vue.js, React.",
                 details: [
-                    "<strong>Arquitetura e Design:</strong> Liderança técnica no desenvolvimento de microsserviços em Golang, utilizando Arquitetura Hexagonal (Ports & Adapters). Aplicação rigorosa de SOLID e Clean Code para garantir sistemas desacoplados e de alta testabilidade.",
-                    "<strong>Otimização de Performance:</strong> Responsável pela redução de 80% na latência de APIs críticas através da refatoração de lógicas ineficientes, otimização de consultas MySQL (análise de índices e planos de execução) e implementação de cache estratégico com Redis.",
-                    "<strong>Sistemas Distribuídos:</strong> Implementação de mensageria com RabbitMQ para processamento assíncrono e arquiteturas orientadas a eventos, garantindo a escalabilidade do ambiente de produção.",
-                    "<strong>Modernização e Qualidade:</strong> Atuação na evolução de sistemas legados, reduzindo o débito técnico e elevando a régua de qualidade do time através de Code Reviews e mentoria técnica.",
-                    "<strong>Integração Full Stack:</strong> Desenvolvimento de interfaces dinâmicas em Vue.js e React, assegurando a integração fluida entre o front-end e as APIs em Go/Groovy."
+                    "<strong>Arquitetura e Design:</strong> Liderança técnica no desenvolvimento de microsserviços em <strong>Golang</strong>, utilizando <strong>Arquitetura Hexagonal</strong> (Ports & Adapters). Aplicação rigorosa de <strong>SOLID</strong> e <strong>Clean Code</strong> para garantir sistemas desacoplados e de alta testabilidade.",
+                    "<strong>Otimização de Performance:</strong> Responsável pela <strong>redução de 80% na latência de APIs</strong> críticas através da refatoração de lógicas ineficientes, <strong>otimização de consultas MySQL</strong> (análise de índices e planos de execução) e implementação de cache estratégico com <strong>Redis</strong>.",
+                    "<strong>Sistemas Distribuídos:</strong> Implementação de mensageria com <strong>RabbitMQ</strong> para processamento assíncrono e arquiteturas orientadas a eventos, garantindo a escalabilidade do ambiente de produção.",
+                    "<strong>Modernização e Qualidade:</strong> Atuação na evolução de sistemas legados, reduzindo o débito técnico e elevando a régua de qualidade do time através de <strong>Code Reviews</strong> e mentoria técnica.",
+                    "<strong>Integração Full Stack:</strong> Desenvolvimento de interfaces dinâmicas em <strong>Vue.js</strong> e <strong>React</strong>, assegurando a integração fluida entre o frontend e as APIs em Go/Groovy."
                 ]
             },
             {
@@ -59,8 +59,8 @@ const contentData = {
                 company: "BRQ Digital Solutions",
                 stack: "Java, Spring Boot, Hibernate, Angular, JSF, MySQL, AWS S3.",
                 details: [
-                    "<strong>Cliente Unicesumar:</strong> Atuação no portal acadêmico Studeo, desenvolvendo módulos de alta complexidade com Java (Spring Boot) e Angular. Foco na experiência do usuário e na integridade dos dados acadêmicos.",
-                    "<strong>Cliente Bradesco:</strong> Manutenção evolutiva de sistemas financeiros críticos utilizando Java/JSF. Foco em estabilidade, segurança e conformidade com regras de negócio bancárias."
+                    "<strong>Cliente Unicesumar:</strong> Atuação no portal acadêmico Studeo, desenvolvendo módulos de alta complexidade com <strong>Java (Spring Framework)</strong> e <strong>Angular</strong>. Foco na experiência do usuário e na integridade dos dados acadêmicos.",
+                    "<strong>Cliente Bradesco:</strong> Manutenção evolutiva de sistemas financeiros críticos utilizando <strong>Java</strong> e <strong>JSF</strong>. Foco em estabilidade, segurança e conformidade com regras de negócio bancárias."
                 ]
             },
             {
@@ -69,7 +69,7 @@ const contentData = {
                 company: "Velti Tecnologia",
                 stack: "Java, Spring, JSF, Angular, MySQL.",
                 details: [
-                    "<strong>Desenvolvimento e Modernização:</strong> Atuação Full Stack no sistema Velti Ponto (controle de ponto). Fui responsável pela manutenção e implementação de novas features no código legado (Java/JSF) e participei da fase inicial de migração do Front-end para Angular."
+                    "<strong>Desenvolvimento e Modernização:</strong> Atuação Full Stack no sistema Velti Ponto (controle de ponto). Fui responsável pela manutenção e implementação de novas features no código legado utilizando <strong>Java</strong> e <strong>JSF</strong>, e participei da fase inicial de migração do frontend para <strong>Angular</strong>."
                 ]
             },
             {
@@ -78,8 +78,8 @@ const contentData = {
                 company: "MobileSys",
                 stack: "Java, Spring, JSF, MySQL.",
                 details: [
-                    "<strong>Desenvolvimento Full Stack:</strong> Atuação Full Stack na implementação de novas funcionalidades e correção de bugs no sistema TradePRO Promoter (gestão de equipes externas), utilizando Java/Spring no Backend e JSF no Front-end.",
-                    "<strong>Dados e Contribuição:</strong> Colaborei na modelagem de banco de dados e otimização de queries, atuando no ciclo de dados desde a concepção até a entrega. Implementei relatórios complexos com Apache POI e desenvolvi módulos para coleta de dados em campo e execução de tarefas no ponto de venda."
+                    "<strong>Desenvolvimento Full Stack:</strong> Atuação Full Stack na implementação de novas funcionalidades e correção de bugs no sistema TradePRO Promoter (gestão de equipes externas), utilizando <strong>Java (Spring Framework)</strong> no Backend e <strong>JSF</strong> no frontend.",
+                    "<strong>Dados e Contribuição:</strong> Colaborei na modelagem de banco de dados e otimização de queries, atuando no ciclo de dados desde a concepção até a entrega. Implementei relatórios complexos com <strong>Apache POI</strong> e desenvolvi módulos para coleta de dados em campo e execução de tarefas no ponto de venda."
                 ]
             },
             {
@@ -88,7 +88,7 @@ const contentData = {
                 company: "BRQ Digital Solutions",
                 stack: "Java, JavaScript.",
                 details: [
-                    "<strong>Capacitação e Formação:</strong> Conclusão de curso intensivo de Desenvolvimento Web de 3 meses, com foco em fundamentos de Java e JavaScript.",
+                    "<strong>Capacitação e Formação:</strong> Conclusão de curso intensivo de Desenvolvimento Web de 3 meses, com foco em fundamentos de <strong>Java</strong> e <strong>JavaScript</strong>.",
                     "<strong>Escopo:</strong> Período dedicado à formação técnica e à prontidão para suporte para equipes de desenvolvimento."
                 ]
             }
@@ -104,7 +104,7 @@ const contentData = {
             experience: "Professional Experience"
         },
         text: {
-            resume: "Senior Backend Engineer with over 8 years of experience building distributed systems and microservices architectures. Specialist in Golang and Java, focusing on high-availability solutions and Clean Code. Extensive experience with Hexagonal Architecture (Ports & Adapters), ensuring testability and sustainable evolution of complex and legacy systems. Complementary Frontend experience, ensuring seamless end-to-end integration.",
+            resume: "<strong>Senior Backend Engineer</strong> with over 8 years of experience building distributed systems and microservices architectures. Specialist in <strong>Golang</strong> and <strong>Java</strong>, focusing on high-availability solutions and Clean Code. Extensive experience with <strong>Hexagonal Architecture</strong> (Ports & Adapters), ensuring testability and sustainable evolution of complex and legacy systems. Complementary <strong>frontend</strong> experience, ensuring seamless end-to-end integration.",
             diff: "<strong>Performance & Optimization:</strong> Proven track record of resolving critical bottlenecks, achieving up to 80% reduction in API response times. Expert in query tuning, strategic Redis caching, and payload optimization via DTOs, ensuring high data-traffic efficiency.\n\n<strong>Event-Driven Architecture:</strong> Design and implementation of messaging systems using RabbitMQ for asynchronous processing and service decoupling.\n\n<strong>Product Vision:</strong> Strategic collaboration with stakeholders to translate business requirements into robust, scalable, and maintainable technical architectures.",
             footer: "&copy; 2024 Felipe Gonçalves Denardo"
         },
@@ -126,11 +126,11 @@ const contentData = {
                 company: "CWS Platform",
                 stack: "Golang (GORM), Groovy/Grails, MySQL, Redis, RabbitMQ, Docker, AWS S3, Vue.js, React.",
                 details: [
-                    "<strong>Architecture & Design:</strong> Technical leadership in Golang microservices development using Hexagonal Architecture (Ports & Adapters). Rigorous application of SOLID and Clean Code to ensure decoupled systems and high testability.",
-                    "<strong>Performance Optimization:</strong> Responsible for an 80% reduction in critical API latency by refactoring inefficient logic, optimizing MySQL queries (index analysis and execution plans), and implementing strategic caching with Redis.",
-                    "<strong>Distributed Systems:</strong> Implemented messaging with RabbitMQ for asynchronous processing and event-driven architectures, ensuring production environment scalability.",
-                    "<strong>Modernization & Quality:</strong> Led the evolution of legacy systems, reducing technical debt and raising the team's quality bar through Code Reviews and technical mentorship.",
-                    "<strong>Full Stack Integration:</strong> Developed dynamic interfaces in Vue.js and React, ensuring seamless integration between frontend layers and Go/Groovy APIs."
+                    "<strong>Architecture & Design:</strong> Technical leadership in Golang microservices development using <strong>Hexagonal Architecture</strong> (Ports & Adapters). Rigorous application of <strong>SOLID</strong> and <strong>Clean Code</strong> to ensure decoupled systems and high testability.",
+                    "<strong>Performance Optimization:</strong> Responsible for an <strong>80% reduction in critical API latency</strong> by refactoring inefficient logic, <strong>optimizing MySQL queries</strong> (index analysis and execution plans), and implementing strategic caching with <strong>Redis</strong>.",
+                    "<strong>Distributed Systems:</strong> Implemented messaging with <strong>RabbitMQ</strong> for asynchronous processing and event-driven architectures, ensuring production environment scalability.",
+                    "<strong>Modernization & Quality:</strong> Led the evolution of legacy systems, reducing technical debt and raising the team's quality bar through <strong>Code Reviews</strong> and technical mentorship.",
+                    "<strong>Full Stack Integration:</strong> Developed dynamic interfaces in <strong>Vue.js</strong> and <strong>React</strong>, ensuring seamless integration between frontend layers and Go/Groovy APIs."
                 ]
             },
             {
@@ -139,8 +139,8 @@ const contentData = {
                 company: "BRQ Digital Solutions",
                 stack: "Java, Spring Boot, Hibernate, Angular, JSF, MySQL, AWS S3.",
                 details: [
-                    "<strong>Unicesumar Client:</strong> Worked on the \"Studeo\" academic portal, developing high-complexity modules with Java (Spring Boot) and Angular. Focused on user experience and academic data integrity.",
-                    "<strong>Bradesco Client:</strong> Executed evolutionary maintenance of critical financial systems using Java/JSF. Focused on stability, security, and compliance with banking business rules."
+                    "<strong>Unicesumar Client:</strong> Worked on the \"Studeo\" academic portal, developing high-complexity modules with <strong>Java (Spring Framework)</strong> and <strong>Angular</strong>. Focused on user experience and academic data integrity.",
+                    "<strong>Bradesco Client:</strong> Executed evolutionary maintenance of critical financial systems using <strong>Java</strong> and <strong>JSF</strong>. Focused on stability, security, and compliance with banking business rules."
                 ]
             },
             {
@@ -149,7 +149,7 @@ const contentData = {
                 company: "Velti Tecnologia",
                 stack: "Java, Spring, JSF, Angular, MySQL.",
                 details: [
-                    "<strong>Development & Modernization:</strong> Full Stack role on the \"Velti Ponto\" system. Responsible for maintaining and implementing new features in legacy code (Java/JSF) and participated in the initial migration phase to Angular."
+                    "<strong>Development & Modernization:</strong> Full Stack role on the \"Velti Ponto\" system. Responsible for maintaining and implementing new features in legacy code using <strong>Java</strong> e <strong>JSF</strong> and participated in the initial migration phase to <strong>Angular</strong>."
                 ]
             },
             {
@@ -158,8 +158,8 @@ const contentData = {
                 company: "MobileSys",
                 stack: "Java, Spring, JSF, MySQL.",
                 details: [
-                    "<strong>Full Stack Development:</strong> Implemented new features and bug fixes for the \"TradePRO Promoter\" system using Java/Spring and JSF.",
-                    "<strong>Data & Contributions:</strong> Collaborated on database modeling and query optimization. Implemented complex reports with Apache POI and developed modules for field data collection and point-of-sale task execution."
+                    "<strong>Full Stack Development:</strong> Implemented new features and bug fixes for the \"TradePRO Promoter\" system using <strong>Java (Spring Framework)</strong> and <strong>JSF</strong>.",
+                    "<strong>Data & Contributions:</strong> Collaborated on database modeling and query optimization. Implemented complex reports with <strong>Apache POI</strong> and developed modules for field data collection and point-of-sale task execution."
                 ]
             },
             {
@@ -168,7 +168,7 @@ const contentData = {
                 company: "BRQ Digital Solutions",
                 stack: "Java, JavaScript.",
                 details: [
-                    "<strong>Training & Development:</strong> Completed a 3-month intensive Web Development bootcamp, focusing on Java and JavaScript fundamentals.",
+                    "<strong>Training & Development:</strong> Completed a 3-month intensive Web Development bootcamp, focusing on <strong>Java</strong> and <strong>JavaScript</strong> fundamentals.",
                     "<strong>Technical Scope:</strong> Period dedicated to technical training and ensuring readiness to support enterprise development teams."
                 ]
             }
