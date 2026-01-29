@@ -1,62 +1,151 @@
+/* Custom Fonts and Base styles complement Tailwind */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
 body {
-    font-family: 'Cambria', 'Georgia', serif;
-    background-color: #f3f3f3;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth Scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    opacity: 0;
+    animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* Hover Float Effect */
+.hover-float {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-float:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Pattern Background for Header */
+.pattern-grid-lg {
+    background-image: linear-gradient(currentColor 1px, transparent 1px), linear-gradient(to right, currentColor 1px, transparent 1px);
+    background-size: 40px 40px;
+    mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+}
+
+/* Custom Contact Link Styles */
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    background-color: #f8fafc;
+    /* bg-slate-50 */
     color: #334155;
-}
-
-.section-title {
-    position: relative;
-    margin-bottom: 1rem;
-    font-weight: 700;
-    color: #0f172a;
-}
-
-.card-experience {
-    transition: all 0.2s ease-in-out;
-    border-left: 4px solid transparent;
-}
-.card-experience:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    border-left-color: #0284c7;
-}
-
-.skill-badge {
-    display: inline-block;
-    padding: 0.25rem 0.75rem;
-    margin: 0.2rem;
+    /* text-slate-700 */
+    font-weight: 500;
     font-size: 0.875rem;
-    border-radius: 0.375rem;
-    font-weight: 600;
+    /* text-sm */
+    transition: all 0.2s;
+    border: 1px solid #e2e8f0;
+    /* border-slate-200 */
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    border-color: #0ea5e9;
+    /* border-sky-500 */
+    color: #0284c7;
+    /* text-sky-600 */
     background-color: #ffffff;
-    border: 1px solid #0284c7; 
-    color: #0284c7; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
-#lang-select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-color: transparent;
-    border: 1px solid #cbd5e1;
-    padding: 0.25rem 2rem 0.25rem 0.75rem;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    font-size: 0.875rem;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
-    background-position: right 0.5rem center;
-    background-repeat: no-repeat;
-    background-size: 1.5em 1.5em;
-}
-.header-lang-select { background-color: #ffffff; }
-#lang-select option { background-color: #ffffff; color: #1e293b; }
-
-@media (min-width: 1024px) {
-    .grid { grid-template-columns: repeat(12, minmax(0, 1fr)); }
-    .lg\:col-span-4 { grid-column: span 4 / span 4; }
-    .lg\:col-span-8 { grid-column: span 8 / span 8; }
+/* Custom Skill Badge */
+.skill-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 0.75rem;
+    /* text-xs */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    transition: background-color 0.2s, color 0.2s;
 }
 
-.text-base {
-    font-size: 1.1rem !important
+/* Timeline Experience Item */
+.timeline-item {
+    position: relative;
+    padding-left: 2rem;
 }
+
+@media (min-width: 768px) {
+    .timeline-item {
+        padding-left: 0;
+    }
+}
+
+/* Markdown-like formatting helpers in text */
+strong {
+    font-weight: 600;
+    color: #454952;
+    /* text-slate-900 */
+}
+
+ul {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+ul>li {
+    margin-bottom: 0.25rem;
+}
+
+/* Timeline Experience Item */
+.timeline-item {
+    position: relative;
+    padding-left: 2rem;
+}
+
+@media (min-width: 768px) {
+    .timeline-item {
+        padding-left: 0;
+    }
+}
+

@@ -1,10 +1,10 @@
 const profileData = {
     name: "Felipe Gonçalves Denardo",
-    role: { 
-        "pt-BR": "Engenheiro Backend Sênior | APIs & Integrações | Microsserviços | Full Stack",
-        "en-US": "Senior Backend Engineer | APIs & Integrations | Microservices | Full Stack" 
-    },            
-    photoUrl: "", 
+    role: {
+        "pt-BR": "Senior Backend Engineer | APIs & Integrações | Microsserviços | Full Stack",
+        "en-US": "Senior Backend Engineer | APIs & Integrations | Microservices | Full Stack"
+    },
+    photoUrl: "assets/profile.jpeg",
     contacts: [
         { type: "phone", value: "(41) 99775-3034", icon: "phone" },
         { type: "email", value: "felipegdenardo@gmail.com", label: "E-mail", icon: "mail" },
@@ -17,51 +17,50 @@ const contentData = {
     "pt-BR": {
         titles: {
             resume: "Resumo Profissional",
-            skills: "Stack de Habilidades",
+            skills: "Habilidades",
             education: "Educação & Idiomas",
             languages: "Idiomas",
             diff: "Diferenciais Técnicos",
             experience: "Experiência Profissional"
         },
         text: {
-            resume: "Engenheiro Backend Sênior com mais de 8 anos de experiência, especializado em APIs, integrações e arquitetura de microsserviços. Forte atuação com Golang e Java, focado na entrega de software de alta qualidade (Clean Code), construção de APIs e microsserviços, modelagem de dados complexos e evolução de sistemas legados. Atuação contínua no suporte ao desenvolvimento front-end, garantindo integração eficiente entre interface e backend.",
-            diff: "Experiência comprovada na entrega de soluções de alta performance e na resolução de gargalos críticos, aplicando estratégias como cache com Redis, tuning de performance em bancos relacionais, refatoração de algoritmos e arquiteturas de mensageria com RabbitMQ para processamento assíncrono e escalabilidade. Atuação em todo o ciclo de desenvolvimento, colaborando com times de produto na tradução de requisitos de negócio em soluções técnicas eficientes.",
+            resume: "Senior Backend Engineer com mais de 8 anos de experiência na construção de sistemas distribuídos e arquitetura de microsserviços. Especialista em Golang e Java, com foco em soluções de alta disponibilidade e Clean Code. Sólida vivência em Arquitetura Hexagonal (Ports & Adapters), garantindo testabilidade e evolução sustentável de sistemas complexos e legados. Experiência complementar em Front-end, assegurando a entrega de integrações eficientes de ponta a ponta.",
+            diff: "<strong>Performance e Otimização:</strong> Histórico comprovado na resolução de gargalos críticos, alcançando reduções de até 80% no tempo de resposta de APIs. Especialista em tuning de queries, implementação estratégica de cache com Redis e otimização de payloads via DTOs, garantindo alta eficiência no tráfego de dados.\n\n<strong>Arquitetura de Eventos:</strong> Definição e implementação de mensageria com RabbitMQ para processamento assíncrono e desacoplamento de serviços.\n\n<strong>Visão de Produto:</strong> Atuação estratégica junto a stakeholders para traduzir requisitos de negócio em arquiteturas técnicas robustas, escaláveis e de fácil manutenção.",
             footer: "&copy; 2024 Felipe Gonçalves Denardo"
         },
         education: [
             { degree: "Sistemas de Informação", school: "Unibrasil", period: "2013 – 2018" }
         ],
-        languages: ["Português: Nativo", "Inglês: Básico em estudo (A2)"],
+        languages: ["Português (Nativo)", "Inglês (Básico/A2 - Em desenvolvimento)"],
         skills: [
-            { category: "Backend", items: ["Golang", "Java", "Spring Boot", "Hibernate", "Groovy/Grails", "APIs REST", "Microsserviços"] },
+            { category: "Backend", items: ["Golang", "Java", "Spring (Boot, Data, Security)", "Hibernate", "Groovy/Grails", "REST APIs", "Microservices"] },
             { category: "Frontend", items: ["Vue.js", "Angular 2+", "TypeScript", "JavaScript", "JSF/PrimeFaces"] },
-            { category: "Dados & Infra", items: ["PostgreSQL", "MySQL", "SQL Server", "Redis", "RabbitMQ", "Docker", "AWS S3", "Linux", "Git"] },
-            { category: "Práticas", items: ["Clean Code", "Scrum", "Kanban", "Modelagem de Dados", "Tuning"] }
+            { category: "Banco de Dados e Mensageria", items: ["PostgreSQL", "MySQL", "SQL Server", "Redis", "RabbitMQ"] },
+            { category: "DevOps e Cloud", items: ["Docker", "AWS (IAM, S3)", "Linux", "Git"] },
+            { category: "Conceitos e Práticas", items: ["Clean Code", "Scrum", "Kanban", "Modelagem de Dados", "Tuning de Performance"] }
         ],
         jobs: [
-            { 
-                role: "Engenheiro Backend Sênior | Full Stack", 
-                period: "Fev/2020 - Atual", 
-                company: "CWS Platform", 
-                stack: "Golang, Groovy/Grails, Vue.js, React, RabbitMQ, Redis, MySQL, PostgreSQL, Docker, AWS S3, Git.",
+            {
+                role: "Senior Backend Engineer",
+                period: "Fev/2020 - Atual",
+                company: "CWS Platform",
+                stack: "Golang (GORM), Groovy/Grails, MySQL, Redis, RabbitMQ, Docker, AWS S3, Vue.js, React.",
                 details: [
-                    "<strong>Backend & APIs:</strong> Desenvolvimento e sustentação de microsserviços em Golang, com foco em baixo acoplamento, manutenibilidade e performance.",
-                    "<strong>Suporte ao Front-end:</strong> Atuação contínua no suporte às aplicações em Vue.js e React, garantindo integração correta com APIs e fluxos de dados.",
-                    "<strong>Arquitetura & Performance:</strong> Implementação de arquiteturas orientadas a eventos e processamento assíncrono com RabbitMQ e Redis.",
-                    "<strong>Modernização de Legado:</strong> Refatoração de módulos antigos para redução de débito técnico e melhoria de performance.",
-                    "<strong>Modelagem de Dados:</strong> Análise e otimização de esquemas de banco de dados, aplicando tuning e indexação.",
-                    "<strong>Qualidade:</strong> Realização de code reviews e disseminação de boas práticas."
+                    "<strong>Arquitetura e Design:</strong> Liderança técnica no desenvolvimento de microsserviços em Golang, utilizando Arquitetura Hexagonal (Ports & Adapters). Aplicação rigorosa de SOLID e Clean Code para garantir sistemas desacoplados e de alta testabilidade.",
+                    "<strong>Otimização de Performance:</strong> Responsável pela redução de 80% na latência de APIs críticas através da refatoração de lógicas ineficientes, otimização de consultas MySQL (análise de índices e planos de execução) e implementação de cache estratégico com Redis.",
+                    "<strong>Sistemas Distribuídos:</strong> Implementação de mensageria com RabbitMQ para processamento assíncrono e arquiteturas orientadas a eventos, garantindo a escalabilidade do ambiente de produção.",
+                    "<strong>Modernização e Qualidade:</strong> Atuação na evolução de sistemas legados, reduzindo o débito técnico e elevando a régua de qualidade do time através de Code Reviews e mentoria técnica.",
+                    "<strong>Integração Full Stack:</strong> Desenvolvimento de interfaces dinâmicas em Vue.js e React, assegurando a integração fluida entre o front-end e as APIs em Go/Groovy."
                 ]
             },
             {
                 role: "Desenvolvedor Full Stack Pleno",
                 period: "Jul/2018 - Fev/2020",
                 company: "BRQ Digital Solutions",
-                stack: "Java, Spring, JSF, Angular, MySQL, AWS S3, Git.",
+                stack: "Java, Spring Boot, Hibernate, Angular, JSF, MySQL, AWS S3.",
                 details: [
-                    "<strong>Backend:</strong> Desenvolvimento de serviços backend em Java, integrando regras de negócio e persistência de dados.",
-                    "<strong>Front-end:</strong> Apoio no desenvolvimento e manutenção de interfaces em Angular e JSF, garantindo integração com o backend.",
-                    "<strong>Sistemas Corporativos:</strong> Atuação em sistemas de grande porte, com foco em estabilidade e evolução de legado."
+                    "<strong>Cliente Unicesumar:</strong> Atuação no portal acadêmico Studeo, desenvolvendo módulos de alta complexidade com Java (Spring Boot) e Angular. Foco na experiência do usuário e na integridade dos dados acadêmicos.",
+                    "<strong>Cliente Bradesco:</strong> Manutenção evolutiva de sistemas financeiros críticos utilizando Java/JSF. Foco em estabilidade, segurança e conformidade com regras de negócio bancárias."
                 ]
             },
             {
@@ -70,8 +69,7 @@ const contentData = {
                 company: "Velti Tecnologia",
                 stack: "Java, Spring, JSF, Angular, MySQL.",
                 details: [
-                    "<strong>Backend:</strong> Manutenção e desenvolvimento de funcionalidades em Java no sistema Velti Ponto.",
-                    "<strong>Front-end:</strong> Apoio à camada de interface em Angular e JSF."
+                    "<strong>Desenvolvimento e Modernização:</strong> Atuação Full Stack no sistema Velti Ponto (controle de ponto). Fui responsável pela manutenção e implementação de novas features no código legado (Java/JSF) e participei da fase inicial de migração do Front-end para Angular."
                 ]
             },
             {
@@ -80,9 +78,8 @@ const contentData = {
                 company: "MobileSys",
                 stack: "Java, Spring, JSF, MySQL.",
                 details: [
-                    "<strong>Backend:</strong> Desenvolvimento e correção de funcionalidades no sistema TradePRO Promoter.",
-                    "<strong>Front-end:</strong> Apoio à interface em JSF e implementação de relatórios.",
-                    "<strong>Dados:</strong> Contribuição na modelagem de banco de dados e otimização de consultas."
+                    "<strong>Desenvolvimento Full Stack:</strong> Atuação Full Stack na implementação de novas funcionalidades e correção de bugs no sistema TradePRO Promoter (gestão de equipes externas), utilizando Java/Spring no Backend e JSF no Front-end.",
+                    "<strong>Dados e Contribuição:</strong> Colaborei na modelagem de banco de dados e otimização de queries, atuando no ciclo de dados desde a concepção até a entrega. Implementei relatórios complexos com Apache POI e desenvolvi módulos para coleta de dados em campo e execução de tarefas no ponto de venda."
                 ]
             },
             {
@@ -91,8 +88,8 @@ const contentData = {
                 company: "BRQ Digital Solutions",
                 stack: "Java, JavaScript.",
                 details: [
-                    "<strong>Formação Técnica:</strong> Capacitação intensiva em desenvolvimento web, com foco em fundamentos de Java e JavaScript.",
-                    "<strong>Front-end:</strong> Apoio inicial no desenvolvimento de interfaces web."
+                    "<strong>Capacitação e Formação:</strong> Conclusão de curso intensivo de Desenvolvimento Web de 3 meses, com foco em fundamentos de Java e JavaScript.",
+                    "<strong>Escopo:</strong> Período dedicado à formação técnica e à prontidão para suporte para equipes de desenvolvimento."
                 ]
             }
         ]
@@ -100,51 +97,50 @@ const contentData = {
     "en-US": {
         titles: {
             resume: "Professional Summary",
-            skills: "Skills Stack",
+            skills: "Technical Skills",
             education: "Education & Languages",
             languages: "Languages",
-            diff: "Technical Differentiators",
+            diff: "Technical Highlights",
             experience: "Professional Experience"
         },
         text: {
-            resume: "Senior Backend Engineer with over 8 years of experience, specializing in APIs, integrations, and microservices architecture. Strong expertise in Golang and Java, focused on delivering high-quality software (Clean Code), building APIs and microservices, complex data modeling, and legacy system evolution. Continuous experience in front-end development support, ensuring efficient integration between the interface and the backend.",
-            diff: "Proven experience in delivering high-performance solutions and resolving critical bottlenecks, applying strategies such as Redis caching, relational database performance tuning, algorithm refactoring, and RabbitMQ messaging architectures for asynchronous processing and scalability. Experienced in the entire development lifecycle, collaborating with product teams to translate business requirements into efficient technical solutions.",
+            resume: "Senior Backend Engineer with over 8 years of experience building distributed systems and microservices architectures. Specialist in Golang and Java, focusing on high-availability solutions and Clean Code. Extensive experience with Hexagonal Architecture (Ports & Adapters), ensuring testability and sustainable evolution of complex and legacy systems. Complementary Frontend experience, ensuring seamless end-to-end integration.",
+            diff: "<strong>Performance & Optimization:</strong> Proven track record of resolving critical bottlenecks, achieving up to 80% reduction in API response times. Expert in query tuning, strategic Redis caching, and payload optimization via DTOs, ensuring high data-traffic efficiency.\n\n<strong>Event-Driven Architecture:</strong> Design and implementation of messaging systems using RabbitMQ for asynchronous processing and service decoupling.\n\n<strong>Product Vision:</strong> Strategic collaboration with stakeholders to translate business requirements into robust, scalable, and maintainable technical architectures.",
             footer: "&copy; 2024 Felipe Gonçalves Denardo"
         },
         education: [
-            { degree: "Information Systems", school: "Unibrasil", period: "2013 – 2018" }
+            { degree: "B.S. in Information Systems", school: "Unibrasil", period: "2013 – 2018" }
         ],
-        languages: ["Portuguese: Native", "English: Basic - Currently studying (A2)"],
+        languages: ["Portuguese (Native)", "English (Elementary/A2 – Currently studying)"],
         skills: [
-            { category: "Backend", items: ["Golang", "Java", "Spring Boot", "Hibernate", "Groovy/Grails", "REST APIs", "Microservices"] },
+            { category: "Backend", items: ["Golang", "Java", "Spring (Boot, Data, Security)", "Hibernate", "Groovy/Grails", "REST APIs", "Microservices"] },
             { category: "Frontend", items: ["Vue.js", "Angular 2+", "TypeScript", "JavaScript", "JSF/PrimeFaces"] },
-            { category: "Data & Infra", items: ["PostgreSQL", "MySQL", "SQL Server", "Redis", "RabbitMQ", "Docker", "AWS S3", "Linux", "Git"] },
-            { category: "Practices", items: ["Clean Code", "Scrum", "Kanban", "Data Modeling", "Tuning"] }
+            { category: "Databases & Messaging", items: ["PostgreSQL", "MySQL", "SQL Server", "Redis", "RabbitMQ"] },
+            { category: "DevOps & Cloud", items: ["Docker", "AWS (IAM, S3)", "Linux", "Git"] },
+            { category: "Core Competencies", items: ["Clean Code", "SOLID", "Hexagonal Architecture", "Scrum", "Kanban", "Data Modeling", "Performance Tuning"] }
         ],
         jobs: [
-            { 
-                role: "Senior Backend Engineer | Full Stack", 
-                period: "Feb/2020 - Present", 
-                company: "CWS Platform", 
-                stack: "Golang, Groovy/Grails, Vue.js, React, RabbitMQ, Redis, MySQL, PostgreSQL, Docker, AWS S3, Git.",
+            {
+                role: "Senior Backend Engineer",
+                period: "Feb/2020 - Present",
+                company: "CWS Platform",
+                stack: "Golang (GORM), Groovy/Grails, MySQL, Redis, RabbitMQ, Docker, AWS S3, Vue.js, React.",
                 details: [
-                    "<strong>Backend & APIs:</strong> Development and maintenance of microservices in Golang, focusing on low coupling, maintainability, and performance.",
-                    "<strong>Frontend Support:</strong> Continuous support for Vue.js and React applications, ensuring correct integration with APIs and data flows.",
-                    "<strong>Architecture & Performance:</strong> Implementation of event-driven architectures and asynchronous processing using RabbitMQ and Redis.",
-                    "<strong>Legacy Modernization:</strong> Refactoring legacy modules to reduce technical debt and improve system performance.",
-                    "<strong>Data Modeling:</strong> Database schema analysis and optimization, applying performance tuning and indexing.",
-                    "<strong>Quality:</strong> Conducting code reviews and promoting best practices."
+                    "<strong>Architecture & Design:</strong> Technical leadership in Golang microservices development using Hexagonal Architecture (Ports & Adapters). Rigorous application of SOLID and Clean Code to ensure decoupled systems and high testability.",
+                    "<strong>Performance Optimization:</strong> Responsible for an 80% reduction in critical API latency by refactoring inefficient logic, optimizing MySQL queries (index analysis and execution plans), and implementing strategic caching with Redis.",
+                    "<strong>Distributed Systems:</strong> Implemented messaging with RabbitMQ for asynchronous processing and event-driven architectures, ensuring production environment scalability.",
+                    "<strong>Modernization & Quality:</strong> Led the evolution of legacy systems, reducing technical debt and raising the team's quality bar through Code Reviews and technical mentorship.",
+                    "<strong>Full Stack Integration:</strong> Developed dynamic interfaces in Vue.js and React, ensuring seamless integration between frontend layers and Go/Groovy APIs."
                 ]
             },
             {
                 role: "Mid-Level Full Stack Developer",
                 period: "Jul/2018 - Feb/2020",
                 company: "BRQ Digital Solutions",
-                stack: "Java, Spring, JSF, Angular, MySQL, AWS S3, Git.",
+                stack: "Java, Spring Boot, Hibernate, Angular, JSF, MySQL, AWS S3.",
                 details: [
-                    "<strong>Backend:</strong> Java backend services development, integrating business rules and data persistence.",
-                    "<strong>Front-end:</strong> Supporting development and maintenance of Angular and JSF interfaces, ensuring backend integration.",
-                    "<strong>Enterprise Systems:</strong> Working on large-scale systems, focusing on stability and legacy evolution."
+                    "<strong>Unicesumar Client:</strong> Worked on the \"Studeo\" academic portal, developing high-complexity modules with Java (Spring Boot) and Angular. Focused on user experience and academic data integrity.",
+                    "<strong>Bradesco Client:</strong> Executed evolutionary maintenance of critical financial systems using Java/JSF. Focused on stability, security, and compliance with banking business rules."
                 ]
             },
             {
@@ -153,8 +149,7 @@ const contentData = {
                 company: "Velti Tecnologia",
                 stack: "Java, Spring, JSF, Angular, MySQL.",
                 details: [
-                    "<strong>Backend:</strong> Feature development and maintenance in Java for the Velti Ponto system.",
-                    "<strong>Front-end:</strong> Support for the Angular and JSF interface layer."
+                    "<strong>Development & Modernization:</strong> Full Stack role on the \"Velti Ponto\" system. Responsible for maintaining and implementing new features in legacy code (Java/JSF) and participated in the initial migration phase to Angular."
                 ]
             },
             {
@@ -163,19 +158,18 @@ const contentData = {
                 company: "MobileSys",
                 stack: "Java, Spring, JSF, MySQL.",
                 details: [
-                    "<strong>Backend:</strong> Feature development and bug fixing for the TradePRO Promoter system.",
-                    "<strong>Front-end:</strong> Support for the JSF interface and report implementation.",
-                    "<strong>Data:</strong> Contribution to database modeling and query optimization."
+                    "<strong>Full Stack Development:</strong> Implemented new features and bug fixes for the \"TradePRO Promoter\" system using Java/Spring and JSF.",
+                    "<strong>Data & Contributions:</strong> Collaborated on database modeling and query optimization. Implemented complex reports with Apache POI and developed modules for field data collection and point-of-sale task execution."
                 ]
             },
             {
-                role: "Web Developer Intern",
+                role: "Web Development Intern",
                 period: "Jun/2016 - Sep/2016",
                 company: "BRQ Digital Solutions",
                 stack: "Java, JavaScript.",
                 details: [
-                    "<strong>Technical Training:</strong> Intensive web development training focusing on Java and JavaScript fundamentals.",
-                    "<strong>Front-end:</strong> Initial support in web interface development."
+                    "<strong>Training & Development:</strong> Completed a 3-month intensive Web Development bootcamp, focusing on Java and JavaScript fundamentals.",
+                    "<strong>Technical Scope:</strong> Period dedicated to technical training and ensuring readiness to support enterprise development teams."
                 ]
             }
         ]
@@ -195,75 +189,117 @@ function renderPage(lang) {
 
     document.getElementById('profile-name').textContent = profileData.name;
     document.getElementById('profile-role').textContent = profileData.role[lang];
-    
+
     const img = document.getElementById('profile-image');
-    img.src = profileData.photoUrl || `https://ui-avatars.com/api/?name=Felipe+Denardo&background=0ea5e9&color=fff&size=128`;
-    img.onerror = function() {
-        this.src='https://ui-avatars.com/api/?name=Felipe+Denardo&background=0ea5e9&color=fff&size=128';
+    img.src = profileData.photoUrl || `https://ui-avatars.com/api/?name=Felipe+Denardo&background=0f172a&color=fff&size=200`;
+    img.onerror = function () {
+        this.src = 'https://ui-avatars.com/api/?name=Felipe+Denardo&background=0f172a&color=fff&size=200';
     };
 
     const contactContainer = document.getElementById('contact-container');
     contactContainer.innerHTML = '';
     profileData.contacts.forEach(c => {
         let html = '';
-        if(c.type === 'link' || c.type === 'email') {
+        if (c.type === 'link' || c.type === 'email') {
             const href = c.type === 'email' ? `mailto:${c.value}` : c.value;
-            html = `<a href="${href}" target="_blank" class="flex items-center hover:text-sky-700">${icons[c.icon]}${c.label || c.value}</a>`;
+            html = `<a href="${href}" target="_blank" class="contact-link group">
+                        ${icons[c.icon]}
+                        <span class="group-hover:text-sky-600 transition-colors">${c.label || c.value}</span>
+                    </a>`;
         } else {
-            html = `<p class="flex items-center">${icons[c.icon]}<span>${c.value}</span></p>`;
+            html = `<div class="contact-link cursor-default">
+                        ${icons[c.icon]}
+                        <span>${c.value}</span>
+                    </div>`;
         }
         contactContainer.innerHTML += html;
     });
 
     document.getElementById('resume-title').textContent = data.titles.resume;
-    document.getElementById('resume-text').textContent = data.text.resume;
+    document.getElementById('resume-text').innerHTML = data.text.resume; // Changed to innerHTML for potential formatting
     document.getElementById('skills-title').textContent = data.titles.skills;
     document.getElementById('education-title').textContent = data.titles.education;
     document.getElementById('languages-title').textContent = data.titles.languages;
     document.getElementById('diff-title').textContent = data.titles.diff;
-    document.getElementById('diff-text').textContent = data.text.diff;
+    document.getElementById('diff-text').innerHTML = data.text.diff.replace(/\n/g, '<br>'); // Simple line break handling
     document.getElementById('experience-title').textContent = data.titles.experience;
     document.getElementById('footer-text').innerHTML = data.text.footer;
 
     const skillsContainer = document.getElementById('skills-container');
     skillsContainer.innerHTML = '';
     data.skills.forEach(cat => {
-        const itemsHtml = cat.items.map(item => `<span class="inline-block bg-sky-50 text-sky-700 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded border border-sky-100">${item}</span>`).join('');
-        skillsContainer.innerHTML += `<div><p class="font-bold text-gray-800 mb-1 text-sm uppercase tracking-wider">${cat.category}</p><div>${itemsHtml}</div></div>`;
+        // Generating badges with new .skill-badge class
+        const itemsHtml = cat.items.map(item =>
+            `<span class="skill-badge bg-slate-100 text-slate-700 hover:bg-sky-100 hover:text-sky-700">${item}</span>`
+        ).join('');
+
+        skillsContainer.innerHTML += `
+            <div>
+                <p class="font-bold text-slate-800 mb-2 text-xs uppercase tracking-wider flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
+                    ${cat.category}
+                </p>
+                <div class="flex flex-wrap gap-2">${itemsHtml}</div>
+            </div>`;
     });
 
     const educationContainer = document.getElementById('education-container');
     educationContainer.innerHTML = '';
     data.education.forEach(edu => {
         educationContainer.innerHTML += `
-            <div class="mb-6">
-                <p class="font-bold text-gray-900 text-lg">${edu.degree}</p>
-                <p class="text-sky-600">${edu.school}</p>
-                <p class="text-gray-500 text-sm">${edu.period}</p>
+            <div class="mb-6 relative">
+                <div class="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-slate-300 border-2 border-white"></div>
+                <h4 class="font-bold text-slate-900 text-base md:text-lg">${edu.degree}</h4>
+                <p class="font-medium">${edu.school}</p>
+                <p class="text-slate-500 text-sm mt-1">${edu.period}</p>
             </div>`;
     });
 
     const langList = document.getElementById('languages-list');
     langList.innerHTML = '';
     data.languages.forEach(l => {
-        langList.innerHTML += `<li>${l}</li>`;
+        langList.innerHTML += `<li class="flex items-center gap-2"><span class="w-1 h-1 bg-slate-400 rounded-full"></span>${l}</li>`;
     });
 
     const expContainer = document.getElementById('experience-container');
     expContainer.innerHTML = '';
-    data.jobs.forEach(job => {
-        const detailsHtml = job.details.map(d => `<li>${d}</li>`).join('');
+    data.jobs.forEach((job, index) => {
+        const detailsHtml = job.details.map(d => `<li class="pl-1">${d}</li>`).join('');
+
+        // Timeline Item Structure (Centered Card Style)
         expContainer.innerHTML += `
-            <div class="p-6 rounded-lg mb-8 border border-gray-100 bg-white shadow-sm hover:shadow-md transition-shadow">
-                <div class="flex flex-col sm:flex-row justify-between items-start mb-2">
-                    <h4 class="text-xl font-bold text-gray-900">${job.role}</h4>
-                    <span class="text-sm font-medium text-gray-600 bg-gray-100 px-3 py-1 rounded-full mt-2 sm:mt-0">${job.period}</span>
+            <div class="timeline-item group fade-in-up" style="animation-delay: ${index * 100}ms">                
+                
+                <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-all sm:ml-4 relative">
+                    <div class="flex flex-col sm:flex-row justify-between items-start mb-3 gap-2">
+                        <div>
+                            <h4 class="text-xl font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">${job.role}</h4>
+                            <p class="text-lg text-slate-500 font-medium">${job.company}</p>
+                        </div>
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-600 whitespace-nowrap border border-slate-200">
+                            ${job.period}
+                        </span>
+                    </div>
+                    
+                    <ul class="space-y-3 text-slate-600 text-sm md:text-base mb-4 leading-relaxed marker:text-sky-400">
+                        ${detailsHtml}
+                    </ul>
+                    
+                    ${job.stack ? `
+                        <div class="mt-5 pt-4 border-t border-slate-50">
+                            <p class="text-xs text-slate-400 font-mono mb-2 uppercase tracking-wide">Tech Stack</p>
+                            <div class="flex flex-wrap gap-2 text-sm text-slate-600 font-medium">
+                                ${job.stack.split(',').map(s => `<span class="bg-slate-50 px-2 py-1 rounded text-slate-600 text-xs border border-slate-100">${s.trim()}</span>`).join('')}
+                            </div>
+                        </div>` : ''}
                 </div>
-                <p class="text-lg text-sky-600 font-medium mb-4">${job.company}</p>
-                <ul class="list-disc ml-5 text-gray-600 space-y-3 text-base">${detailsHtml}</ul>
-                ${job.stack ? `<div class="mt-4 pt-4 border-t border-gray-200"><p class="text-sm text-gray-500 font-mono"><strong class="text-gray-700">Stack:</strong> ${job.stack}</p></div>` : ''}
             </div>`;
     });
+
+    // Re-initialize icons for newly injected content
+    if (typeof feather !== 'undefined') {
+        feather.replace();
+    }
 }
 
 const langSelect = document.getElementById('lang-select');
