@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -12,7 +12,7 @@
         content="Felipe Gonçalves Denardo, Backend Engineer, Engenheiro Backend, Sênior, Golang, Java, APIs, Integrações, Microsserviços, Full Stack Developer">
     <meta name="author" content="Felipe Gonçalves Denardo">
 
-    <meta name="theme-color" content="#0f172a">
+    <meta name="theme-color" content="#667eea">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://felipedenardo.github.io/">
     <meta property="og:title" content="Felipe Gonçalves Denardo | Senior Backend Engineer">
@@ -20,191 +20,104 @@
         content="Confira meu currículo interativo focado em arquitetura de sistemas escaláveis e alta performance.">
     <meta property="og:image" content="https://felipedenardo.github.io/banner-linkedin.png">
 
-    <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
-    <!-- Feather Icons -->
-    <script src="https://unpkg.com/feather-icons"></script>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        slate: {
-                            850: '#1e293b',
-                            900: '#0f172a',
-                        },
-                        sky: {
-                            450: '#0ea5e9', // Custom electric blue
-                        }
-                    }
-                }
-            }
-        }
-    </script>
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="bg-slate-50 text-slate-800 antialiased selection:bg-sky-500 selection:text-white">
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-
-        <!-- Header / Hero Section -->
-        <header class="relative bg-white rounded-3xl shadow-xl overflow-hidden mb-10 fade-in-up">
-            <div class="absolute inset-0 bg-slate-900 pattern-grid-lg opacity-5"></div>
-            <div class="absolute top-0 right-0 p-6 z-20">
-                <div class="relative inline-block text-left">
-                    <select id="lang-select"
-                        class="appearance-none bg-white/90 backdrop-blur-sm border border-slate-200 text-slate-700 py-2 pl-4 pr-10 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 font-medium cursor-pointer transition-all hover:bg-white">
-                        <option value="pt-BR">🇧🇷 PT</option>
-                        <option value="en-US">🇺🇸 EN</option>
-                    </select>
-                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-slate-500">
-                        <i data-feather="chevron-down" class="w-4 h-4"></i>
-                    </div>
+<body>
+    <!-- Navigation Header -->
+    <nav class="nav-header">
+        <div class="nav-brand" aria-label="Brand">
+            <span class="brand-text">&lt;/&gt;</span>
+        </div>
+        <button id="nav-toggle" class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-links">
+            <a href="#home" class="nav-link" id="nav-home">Home</a>
+            <a href="#skills" class="nav-link" id="nav-skills">Skills</a>
+            <a href="#experience" class="nav-link" id="nav-experience">Experience</a>
+            <a href="#highlights" class="nav-link" id="nav-highlights">Diferenciais</a>
+        </div>
+        <div class="lang-selector-nav">
+            <details id="lang-dropdown" class="lang-dropdown">
+                <summary id="lang-current" class="lang-summary" aria-label="Selecionar idioma">🇧🇷 PT</summary>
+                <div class="lang-menu">
+                    <button class="lang-option" data-lang="pt-BR">🇧🇷 PT</button>
+                    <button class="lang-option" data-lang="en-US">🇺🇸 EN</button>
                 </div>
-            </div>
+            </details>
+        </div>
+    </nav>
 
-            <div
-                class="relative z-10 px-8 py-12 md:py-12 md:px-12 flex flex-col md:flex-row items-center justify-center text-center md:text-left gap-12">
-                <div class="relative group">
-                    <div
-                        class="absolute -inset-1 bg-gradient-to-r from-sky-400 to-indigo-500 rounded-full blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200">
-                    </div>
-                    <img id="profile-image"
-                        class="relative w-36 h-36 md:w-44 md:h-44 rounded-full object-cover border-4 border-white shadow-lg transform transition duration-500 hover:scale-105"
-                        src="" alt="Felipe Denardo">
+    <!-- Hero Section -->
+    <section id="home" class="section">
+        <div class="section-content hero-content">
+            <div class="hero-main">
+                <div class="hero-image-wrapper">
+                    <img id="profile-image" class="hero-image" src="" alt="Felipe Denardo">
                 </div>
-
-                <div class="space-y-4 text-left">
-                    <div>
-                        <h1 id="profile-name"
-                            class="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-4"></h1>
-                        <h2 id="profile-role" class="text-lg md:text-xl font-medium text-slate-600"></h2>
-                    </div>
-
-                    <div id="contact-container" class="flex flex-wrap justify-center md:justify-start gap-4 pt-2">
+                <div class="hero-text">
+                    <h1 id="profile-name" class="hero-name"></h1>
+                    <p id="profile-role" class="hero-role"></p>
+                    <div id="contact-container" class="hero-contacts">
                         <!-- Contacts injected via JS -->
                     </div>
                 </div>
             </div>
-        </header>
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
-
-            <!-- Left Column (Sidebar-like) -->
-            <aside class="lg:col-span-4 space-y-8">
-
-                <!-- Skills -->
-                <section class="bg-white rounded-2xl shadow-lg p-6 md:p-8 hover-float fade-in-up"
-                    style="animation-delay: 200ms;">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="p-2 bg-indigo-100 text-indigo-600 rounded-lg">
-                            <i data-feather="code" class="w-5 h-5"></i>
-                        </div>
-                        <h3 id="skills-title" class="text-xl font-bold text-slate-900"></h3>
-                    </div>
-                    <div id="skills-container" class="space-y-6">
-                        <!-- Skills injected via JS -->
-                    </div>
-                </section>
-
-                <!-- Education -->
-                <section class="bg-white rounded-2xl shadow-lg p-6 md:p-8 hover-float fade-in-up"
-                    style="animation-delay: 300ms;">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="p-2 bg-emerald-100 text-emerald-600 rounded-lg">
-                            <i data-feather="book-open" class="w-5 h-5"></i>
-                        </div>
-                        <h3 id="education-title" class="text-xl font-bold text-slate-900"></h3>
-                    </div>
-                    <div id="education-container" class="mb-6 relative pl-4 border-l-2 border-slate-100">
-                        <!-- Education items -->
-                    </div>
-
-                    <div class="pt-6 border-t border-slate-100">
-                        <div class="flex items-center gap-2 mb-3">
-                            <i data-feather="globe" class="w-4 h-4 text-slate-400"></i>
-                            <p id="languages-title" class="font-bold text-slate-900 text-sm uppercase tracking-wider">
-                            </p>
-                        </div>
-                        <ul id="languages-list" class="space-y-2 text-slate-600 text-sm md:text-base"></ul>
-                    </div>
-                </section>
-            </aside>
-
-            <!-- Right Column (Main Content) -->
-            <main class="lg:col-span-8 space-y-8">
-
-                <!-- About / Summary (Moved here) -->
-                <section class="bg-white rounded-2xl shadow-lg p-6 md:p-8 hover-float fade-in-up"
-                    style="animation-delay: 100ms;">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="p-2 bg-sky-100 text-indigo-600 rounded-lg">
-                            <i data-feather="user" class="w-5 h-5"></i>
-                        </div>
-                        <h3 id="resume-title" class="text-2xl font-bold text-slate-900"></h3>
-                    </div>
-                    <p id="resume-text" class="text-slate-600 leading-relaxed text-base md:text-lg"></p>
-                </section>
-
-                <!-- Technical Highlights (Updated Style) -->
-                <section class="bg-white rounded-2xl shadow-lg p-6 md:p-8 hover-float fade-in-up"
-                    style="animation-delay: 400ms;">
-
-                    <div class="relative z-10">
-                        <div class="flex items-center gap-3 mb-6">
-                            <div class="p-2 bg-amber-100 text-amber-600 rounded-lg">
-                                <i data-feather="star" class="w-5 h-5"></i>
-                            </div>
-                            <h3 id="diff-title" class="text-2xl font-bold text-slate-900 tracking-tight"></h3>
-                        </div>
-                        <p id="diff-text" class="text-slate-600 leading-relaxed text-base md:text-lg"></p>
-                    </div>
-                </section>
-
-                <!-- Experience -->
-                <section class="bg-white rounded-2xl shadow-lg p-6 md:p-8 fade-in-up" style="animation-delay: 500ms;">
-                    <div class="flex items-center gap-3 mb-8">
-                        <div class="p-2 bg-sky-100 text-indigo-600 rounded-lg">
-                            <i data-feather="briefcase" class="w-5 h-5"></i>
-                        </div>
-                        <h3 id="experience-title" class="text-2xl font-bold text-slate-900"></h3>
-                    </div>
-
-                    <div id="experience-container"
-                        class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-200 before:to-transparent">
-                        <!-- Experience items injected via JS -->
-                    </div>
-                </section>
-            </main>
-        </div>
-
-        <footer class="mt-16 pt-8 border-t border-slate-200 text-center text-slate-400 text-sm pb-8 fade-in-up"
-            style="animation-delay: 600ms;">
-            <p id="footer-text"></p>
-            <div class="mt-4 flex justify-center gap-4">
-                <a href="#" class="opacity-50 hover:opacity-100 transition-opacity"><i data-feather="github"
-                        class="w-4 h-4"></i></a>
-                <a href="#" class="opacity-50 hover:opacity-100 transition-opacity"><i data-feather="linkedin"
-                        class="w-4 h-4"></i></a>
+            <div class="hero-summary">
+                <p id="summary-text" class="summary-text"></p>
             </div>
-        </footer>
-    </div>
+        </div>
+    </section>
+
+    <!-- Skills Section with Carousel -->
+    <section id="skills" class="section">      
+        <div class="section-content">
+            <div class="carousel-container">
+                <button class="carousel-arrow left" id="carousel-prev" aria-label="Previous">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <div id="skills-carousel" class="carousel-wrapper">
+                    <!-- Skills cards injected via JS -->
+                </div>
+                <button class="carousel-arrow right" id="carousel-next" aria-label="Next">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+            <div id="carousel-dots" class="carousel-nav">
+                <!-- Dots injected via JS -->
+            </div>     
+        </div>  
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="section-content">
+            <div id="experience-container" class="experience-list">
+                <!-- Experience items injected via JS -->
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Technical Highlights Section -->
+    <section id="highlights" class="section">
+        <div class="highlights-container-wide">
+            <div class="highlights-card">
+                <div id="highlights-container" class="highlights-content">
+                    <!-- Highlights injected via JS -->
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script src="script.js"></script>
-    <script>
-        // Initialize Feather Icons
-        feather.replace();
-    </script>
 </body>
 
 </html>

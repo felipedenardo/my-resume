@@ -15,36 +15,41 @@ const profileData = {
 
 const contentData = {
     "pt-BR": {
-        titles: {
-            resume: "Resumo Profissional",
+        nav: {
+            home: "Início",
             skills: "Habilidades",
-            education: "Educação & Idiomas",
-            languages: "Idiomas",
-            diff: "Diferenciais Técnicos",
-            experience: "Experiência Profissional"
+            experience: "Experiência",
+            highlights: "Diferenciais",
+            education: "Educação"
         },
-        text: {
-            resume: "<strong>Senior Backend Engineer</strong> com mais de 8 anos de experiência na construção de sistemas distribuídos e arquitetura de microsserviços. Especialista em <strong>Golang</strong> e <strong>Java</strong>, com foco em soluções de alta disponibilidade e resiliência. Ampla experiência na aplicação de <strong>Clean Architecture</strong>, priorizando o desacoplamento da lógica de negócio e a independência de infraestrutura para garantir sistemas testáveis e de fácil manutenção. Experiência complementar em <strong>frontend</strong>, assegurando a entrega de integrações eficientes de ponta a ponta.",
-            diff: "<strong>Performance e Otimização:</strong> Histórico comprovado na resolução de gargalos críticos, alcançando reduções de até 80% no tempo de resposta de APIs. Especialista em tuning de queries, implementação estratégica de cache com Redis e otimização de payloads via DTOs, garantindo alta eficiência no tráfego de dados.\n\n<strong>Arquitetura de Eventos:</strong> Definição e implementação de mensageria com RabbitMQ para processamento assíncrono e desacoplamento de serviços.\n\n<strong>Visão de Produto:</strong> Atuação estratégica junto a stakeholders para traduzir requisitos de negócio em arquiteturas técnicas robustas, escaláveis e de fácil manutenção.",
-            footer: "&copy; 2024 Felipe Gonçalves Denardo"
-        },
-        education: [
-            { degree: "Sistemas de Informação", school: "Unibrasil", period: "2013 – 2018" }
+        summary: "<b>Senior Backend Engineer</b> com mais de 8 anos de experiência na construção de sistemas distribuídos e arquitetura de microsserviços. Especialista em <b>Golang</b> e <b>Java</b>, com foco em soluções de alta disponibilidade e resiliência. Ampla experiência na aplicação de <b>Clean Architecture</b>, priorizando o desacoplamento da lógica de negócio e a independência de infraestrutura para garantir sistemas testáveis e de fácil manutenção. Experiência complementar em <b>frontend</b>, assegurando a entrega de integrações eficientes de ponta a ponta.",
+        highlights: [
+            {
+                title: "Performance e Otimização",
+                description: "Histórico comprovado na resolução de gargalos críticos, alcançando reduções de até 80% no tempo de resposta de APIs. Especialista em tuning de queries, implementação estratégica de cache com Redis e otimização de payloads via DTOs, garantindo alta eficiência no tráfego de dados."
+            },
+            {
+                title: "Arquitetura de Eventos",
+                description: "Definição e implementação de mensageria com RabbitMQ para processamento assíncrono e desacoplamento de serviços."
+            },
+            {
+                title: "Visão de Produto",
+                description: "Atuação estratégica junto a stakeholders para traduzir requisitos de negócio em arquiteturas técnicas robustas, escaláveis e de fácil manutenção."
+            }
         ],
-        languages: ["Português (Nativo)", "Inglês (Básico/A2 - Em desenvolvimento)"],
         skills: [
-            { category: "Backend", items: ["Golang", "Java", "Spring (Boot, Data, Security)", "Hibernate", "Groovy/Grails", "REST APIs", "Microservices"] },
-            { category: "Frontend", items: ["Vue.js", "Angular 2+", "TypeScript", "JavaScript", "JSF/PrimeFaces"] },
-            { category: "Banco de Dados e Mensageria", items: ["PostgreSQL", "MySQL", "SQL Server", "Redis", "RabbitMQ"] },
-            { category: "DevOps e Cloud", items: ["Docker", "AWS (IAM, S3)", "Linux", "Git"] },
-            { category: "Conceitos e Práticas", items: ["Clean Code", "Scrum", "Kanban", "Modelagem de Dados", "Tuning de Performance"] }
+            { category: "Backend", items: ["Golang", "Java 8+", "Microservices", "Spring (Boot, Data, Security)", "JWT", "ORM (GORM & Hibernate)", "Gin Gonic", "Groovy/Grails", "JSF", "Swagger / OpenAPI", "REST APIs", "Desenvolvimento de Shared Libraries", "Arquitetura Hexagonal / Clean Architecture"] },
+            { category: "Banco de Dados e Mensageria", items: ["PostgreSQL", "MySQL", "SQL Server", "Redis", "RabbitMQ", "Event-Driven Architecture", "JSEND Pattern"] },
+            { category: "DevOps e Cloud", items: ["Docker", "Docker Compose Multi-Service", "AWS (S3, IAM, EC2)", "Linux", "Git"] },
+            { category: "Conceitos e Práticas", items: ["Clean Code", "Strongly Typed Domain", "Scrum", "Kanban", "Modelagem de Dados", "Tuning de Performance"] },
+            { category: "Frontend", items: ["Vue.js", "Angular 2+", "TypeScript", "JavaScript", "Material Design", "Bootstrap", "PrimeFaces"] },
         ],
         jobs: [
             {
                 role: "Senior Backend Engineer",
                 period: "Fev/2020 - Atual",
                 company: "CWS Platform",
-                stack: "Golang (GORM), Groovy/Grails, MySQL, Redis, RabbitMQ, Docker, AWS S3, Vue.js, React.",
+                stack: "Golang (GORM), Groovy/Grails, MySQL, PostgreSQL, Redis, RabbitMQ, Docker, AWS S3, Vue.js, React.",
                 details: [
                     "<strong>Arquitetura e Design:</strong> Liderança técnica no desenvolvimento de microsserviços em <strong>Golang</strong>, aplicando princípios de <strong>Clean Architecture</strong> para isolar o domínio de negócio das dependências de infraestrutura, elevando a cobertura de testes e a manutenibilidade do ecossistema.",
                     "<strong>Otimização de Performance:</strong> Responsável pela <strong>redução de 80% na latência de APIs</strong> críticas através da refatoração de lógicas ineficientes, <strong>otimização de consultas MySQL</strong> (análise de índices e planos de execução) e implementação de cache estratégico com <strong>Redis</strong>.",
@@ -95,36 +100,41 @@ const contentData = {
         ]
     },
     "en-US": {
-        titles: {
-            resume: "Professional Summary",
-            skills: "Technical Skills",
-            education: "Education & Languages",
-            languages: "Languages",
-            diff: "Technical Highlights",
-            experience: "Professional Experience"
+        nav: {
+            home: "Home",
+            skills: "Skills",
+            experience: "Experience",
+            highlights: "Highlights",
+            education: "Education"
         },
-        text: {
-            resume: "<strong>Senior Backend Engineer</strong> with over 8 years of experience building distributed systems and microservices architectures. Specialist in <strong>Golang</strong> and <strong>Java</strong>,  with a focus on high availability and resilience. Extensive experience applying <strong>Clean Architecture</strong> principles, prioritizing the decoupling of business logic and infrastructure independence to ensure highly testable and maintainable systems. Complementary <strong>frontend</strong> experience, ensuring seamless end-to-end integrations.",
-            diff: "<strong>Performance & Optimization:</strong> Proven track record of resolving critical bottlenecks, achieving up to 80% reduction in API response times. Expert in query tuning, strategic Redis caching, and payload optimization via DTOs, ensuring high data-traffic efficiency.\n\n<strong>Event-Driven Architecture:</strong> Design and implementation of messaging systems using RabbitMQ for asynchronous processing and service decoupling.\n\n<strong>Product Vision:</strong> Strategic collaboration with stakeholders to translate business requirements into robust, scalable, and maintainable technical architectures.",
-            footer: "&copy; 2024 Felipe Gonçalves Denardo"
-        },
-        education: [
-            { degree: "B.S. in Information Systems", school: "Unibrasil", period: "2013 – 2018" }
+        summary: "<b>Senior Backend Engineer</b> with over 8 years of experience building distributed systems and microservices architecture. Expert in <b>Golang</b> and <b>Java</b>, focusing on high availability and resilience solutions. Extensive experience applying <b>Clean Architecture</b>, prioritizing decoupling of business logic and infrastructure independence to ensure testable and maintainable systems. Complementary <b>frontend</b> experience, ensuring the delivery of efficient end-to-end integrations.",
+        highlights: [
+            {
+                title: "Performance & Optimization",
+                description: "Proven track record in resolving critical bottlenecks, achieving up to 80% reduction in API response times. Expert in query tuning, strategic cache implementation with Redis, and payload optimization via DTOs, ensuring high efficiency in data traffic."
+            },
+            {
+                title: "Event-Driven Architecture",
+                description: "Definition and implementation of messaging with RabbitMQ for asynchronous processing and service decoupling."
+            },
+            {
+                title: "Product Vision",
+                description: "Strategic collaboration with stakeholders to translate business requirements into robust, scalable, and maintainable technical architectures."
+            }
         ],
-        languages: ["Portuguese (Native)", "English (Elementary/A2 – Currently studying)"],
         skills: [
-            { category: "Backend", items: ["Golang", "Java", "Spring (Boot, Data, Security)", "Hibernate", "Groovy/Grails", "REST APIs", "Microservices"] },
-            { category: "Frontend", items: ["Vue.js", "Angular 2+", "TypeScript", "JavaScript", "JSF/PrimeFaces"] },
-            { category: "Databases & Messaging", items: ["PostgreSQL", "MySQL", "SQL Server", "Redis", "RabbitMQ"] },
-            { category: "DevOps & Cloud", items: ["Docker", "AWS (IAM, S3)", "Linux", "Git"] },
-            { category: "Core Competencies", items: ["Clean Code", "SOLID", "Hexagonal Architecture", "Scrum", "Kanban", "Data Modeling", "Performance Tuning"] }
+            { category: "Backend", items: ["Golang", "Java 8+", "Microservices", "Spring (Boot, Data, Security)", "JWT", "ORM (GORM & Hibernate)", "Gin Gonic", "Groovy/Grails", "JSF", "Swagger / OpenAPI", "REST APIs", "Shared Libraries Development", "Hexagonal / Clean Architecture"] },
+            { category: "Databases & Messaging", items: ["PostgreSQL", "MySQL", "SQL Server", "Redis", "RabbitMQ", "Event-Driven Architecture", "JSEND Pattern"] },
+            { category: "DevOps & Cloud", items: ["Docker", "Docker Compose Multi-Service", "AWS (S3, IAM, EC2)", "Linux", "Git"] },
+            { category: "Core Competencies", items: ["Clean Code", "SOLID", "Strongly Typed Domain", "Scrum", "Kanban", "Data Modeling", "Performance Tuning"] },
+            { category: "Frontend", items: ["Vue.js", "Angular 2+", "TypeScript", "JavaScript", "Material Design", "Bootstrap", "PrimeFaces"] },
         ],
         jobs: [
             {
                 role: "Senior Backend Engineer",
                 period: "Feb/2020 - Present",
                 company: "CWS Platform",
-                stack: "Golang (GORM), Groovy/Grails, MySQL, Redis, RabbitMQ, Docker, AWS S3, Vue.js, React.",
+                stack: "Golang (GORM), Groovy/Grails, MySQL, PostgreSQL, Redis, RabbitMQ, Docker, AWS S3, Vue.js, React.",
                 details: [
                     "<strong>Architecture & Design:</strong> Technical leadership in Golang microservices,applying <strong>Clean Architecture</strong> to isolate the business domain from infrastructure dependencies, significantly increasing test coverage and ecosystem maintainability.",
                     "<strong>Performance Optimization:</strong> Responsible for an <strong>80% reduction in critical API latency</strong> by refactoring inefficient logic, <strong>optimizing MySQL queries</strong> (index analysis and execution plans), and implementing strategic caching with <strong>Redis</strong>.",
@@ -177,139 +187,380 @@ const contentData = {
 };
 
 const icons = {
-    phone: '<svg class="w-4 h-4 mr-1 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.717 21 3 14.283 3 6V5z"></path></svg>',
-    mail: '<svg class="w-4 h-4 mr-1 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>',
-    linkedin: '<svg class="w-4 h-4 mr-1 text-sky-600" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.328-4 0v5.604h-3v-11h3v1.765c1.397-2.714 7-2.825 7 2.456v6.779z"/></svg>',
-    github: '<svg class="w-4 h-4 mr-1 text-sky-600" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.372 0 0 5.372 0 12c0 5.303 3.438 9.8 8.207 11.387.6.11.82-.26.82-.577v-2.003c-3.336.726-4.043-1.608-4.043-1.608-.546-1.385-1.332-1.755-1.332-1.755-1.09-.747.082-.73.082-.73 1.205.085 1.838 1.238 1.838 1.238 1.07 1.835 2.809 1.305 3.491.996.108-.775.419-1.305.762-1.605-2.665-.3-5.466-1.334-5.466-5.93 0-1.31.467-2.38 1.238-3.224-.124-.3-.536-1.523.118-3.18 0 0 1-.32 3.275 1.23.958-.266 1.983-.4 3.01-.405 2.275-1.55 3.275-1.23 3.275-1.23.654 1.657.242 2.88.118 3.18.77.844 1.238 1.913 1.238 3.224 0 4.609-2.805 5.626-5.475 5.923.43.37.817 1.12.817 2.257v3.313c0 .317.22.687.82.577C20.562 21.8 24 17.303 24 12c0-6.628-5.372-12-12-12z"/></svg>'
+    phone: '<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.937 3.659 1.432 5.633 1.433h.005c6.554 0 11.89-5.335 11.893-11.892a11.826 11.826 0 00-3.481-8.417z"/></svg>',
+    mail: '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>',
+    linkedin: '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.328-4 0v5.604h-3v-11h3v1.765c1.397-2.714 7-2.825 7 2.456v6.779z"/></svg>',
+    github: '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.372 0 0 5.372 0 12c0 5.303 3.438 9.8 8.207 11.387.6.11.82-.26.82-.577v-2.003c-3.336.726-4.043-1.608-4.043-1.608-.546-1.385-1.332-1.755-1.332-1.755-1.09-.747.082-.73.082-.73 1.205.085 1.838 1.238 1.838 1.238 1.07 1.835 2.809 1.305 3.491.996.108-.775.419-1.305.762-1.605-2.665-.3-5.466-1.334-5.466-5.93 0-1.31.467-2.38 1.238-3.224-.124-.3-.536-1.523.118-3.18 0 0 1-.32 3.275 1.23.958-.266 1.983-.4 3.01-.405 2.275-1.55 3.275-1.23 3.275-1.23.654 1.657.242 2.88.118 3.18.77.844 1.238 1.913 1.238 3.224 0 4.609-2.805 5.626-5.475 5.923.43.37.817 1.12.817 2.257v3.313c0 .317.22.687.82.577C20.562 21.8 24 17.303 24 12c0-6.628-5.372-12-12-12z"/></svg>',
+    download: '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"></path></svg>'
 };
+
+class Carousel {
+    constructor(config) {
+        this.wrapperId = config.wrapperId;
+        this.prevBtnId = config.prevBtnId;
+        this.nextBtnId = config.nextBtnId;
+        this.dotsId = config.dotsId;
+        this.cardClass = config.cardClass;
+
+        this.currentSlide = 0;
+        this.totalSlides = 0;
+        this.touchStartX = 0;
+        this.touchEndX = 0;
+
+        this.init();
+    }
+
+    init() {
+        const prevBtn = document.getElementById(this.prevBtnId);
+        const nextBtn = document.getElementById(this.nextBtnId);
+        const wrapper = document.getElementById(this.wrapperId);
+
+        if (prevBtn) prevBtn.onclick = () => this.prevSlide();
+        if (nextBtn) nextBtn.onclick = () => this.nextSlide();
+
+        if (wrapper) {
+            wrapper.addEventListener('touchstart', (e) => {
+                this.touchStartX = e.changedTouches[0].screenX;
+            });
+
+            wrapper.addEventListener('touchend', (e) => {
+                this.touchEndX = e.changedTouches[0].screenX;
+                this.handleSwipe();
+            });
+        }
+    }
+
+    setTotalSlides(count) {
+        this.totalSlides = count;
+        this.currentSlide = 0;
+        this.update();
+    }
+
+    update() {
+        const wrapper = document.getElementById(this.wrapperId);
+        if (!wrapper) return;
+        const cards = wrapper.querySelectorAll('.' + this.cardClass);
+        if (cards.length === 0) return;
+
+        this.totalSlides = cards.length;
+
+        cards.forEach((card, index) => {
+            this.applyClasses(card, index);
+        });
+
+        this.updateDots();
+    }
+
+    applyClasses(card, index) {
+        card.classList.remove('active', 'prev', 'next', 'hidden');
+
+        if (index === this.currentSlide) {
+            card.classList.add('active');
+        } else if (index === (this.currentSlide - 1 + this.totalSlides) % this.totalSlides) {
+            card.classList.add('prev');
+        } else if (index === (this.currentSlide + 1) % this.totalSlides) {
+            card.classList.add('next');
+        } else {
+            card.classList.add('hidden');
+        }
+    }
+
+    updateDots() {
+        const dotsContainer = document.getElementById(this.dotsId);
+        if (!dotsContainer) return;
+
+        dotsContainer.innerHTML = '';
+        for (let i = 0; i < this.totalSlides; i++) {
+            const dot = document.createElement('button');
+            dot.className = 'carousel-dot';
+            if (i === this.currentSlide) dot.classList.add('active');
+            dot.onclick = () => {
+                this.currentSlide = i;
+                this.update();
+            };
+            dotsContainer.appendChild(dot);
+        }
+    }
+
+    nextSlide() {
+        if (this.totalSlides === 0) return;
+        this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
+        this.update();
+    }
+
+    prevSlide() {
+        if (this.totalSlides === 0) return;
+        this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+        this.update();
+    }
+
+    handleSwipe() {
+        if (this.touchEndX < this.touchStartX - 50) this.nextSlide();
+        if (this.touchEndX > this.touchStartX + 50) this.prevSlide();
+    }
+}
+
+let skillsCarouselInstance;
+function bindExperienceToggles() {
+    const experienceButtons = document.querySelectorAll('.experience-toggle');
+    experienceButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            const item = button.closest('.experience-item');
+            if (!item) return;
+
+            const shouldExpand = !item.classList.contains('expanded');
+            document.querySelectorAll('.experience-item.expanded').forEach((openItem) => {
+                openItem.classList.remove('expanded');
+                const openButton = openItem.querySelector('.experience-toggle');
+                if (openButton) openButton.setAttribute('aria-expanded', 'false');
+            });
+
+            const isExpanded = shouldExpand;
+            if (shouldExpand) item.classList.add('expanded');
+            button.setAttribute('aria-expanded', String(isExpanded));
+        });
+    });
+}
+
+
+
 
 function renderPage(lang) {
     const data = contentData[lang];
     if (!data) return;
 
+    // Profile
     document.getElementById('profile-name').textContent = profileData.name;
     document.getElementById('profile-role').textContent = profileData.role[lang];
 
     const img = document.getElementById('profile-image');
-    img.src = profileData.photoUrl || `https://ui-avatars.com/api/?name=Felipe+Denardo&background=0f172a&color=fff&size=200`;
+    img.src = profileData.photoUrl || `https://ui-avatars.com/api/?name=Felipe+Denardo&background=667eea&color=fff&size=200`;
     img.onerror = function () {
-        this.src = 'https://ui-avatars.com/api/?name=Felipe+Denardo&background=0f172a&color=fff&size=200';
+        this.src = 'https://ui-avatars.com/api/?name=Felipe+Denardo&background=667eea&color=fff&size=200';
     };
 
+    // Contacts
     const contactContainer = document.getElementById('contact-container');
     contactContainer.innerHTML = '';
     profileData.contacts.forEach(c => {
         let html = '';
-        if (c.type === 'link' || c.type === 'email') {
-            const href = c.type === 'email' ? `mailto:${c.value}` : c.value;
-            html = `<a href="${href}" target="_blank" class="contact-link group">
+        if (c.type === 'link') {
+            html = `<a href="${c.value}" target="_blank" class="contact-btn">
                         ${icons[c.icon]}
-                        <span class="group-hover:text-sky-600 transition-colors">${c.label || c.value}</span>
+                        <span>${c.label || c.value}</span>
                     </a>`;
-        } else {
-            html = `<div class="contact-link cursor-default">
+        } else if (c.type === 'email') {
+            html = `<a href="mailto:${c.value}" class="contact-btn">
+                        ${icons[c.icon]}
+                        <span>${c.label || c.value}</span>
+                    </a>`;
+        } else if (c.type === 'phone') {
+            html = `<a href="https://wa.me/5541997753034" target="_blank" class="contact-btn">
                         ${icons[c.icon]}
                         <span>${c.value}</span>
-                    </div>`;
+                    </a>`;
         }
         contactContainer.innerHTML += html;
     });
 
-    document.getElementById('resume-title').textContent = data.titles.resume;
-    document.getElementById('resume-text').innerHTML = data.text.resume; // Changed to innerHTML for potential formatting
-    document.getElementById('skills-title').textContent = data.titles.skills;
-    document.getElementById('education-title').textContent = data.titles.education;
-    document.getElementById('languages-title').textContent = data.titles.languages;
-    document.getElementById('diff-title').textContent = data.titles.diff;
-    document.getElementById('diff-text').innerHTML = data.text.diff.replace(/\n/g, '<br>'); // Simple line break handling
-    document.getElementById('experience-title').textContent = data.titles.experience;
-    document.getElementById('footer-text').innerHTML = data.text.footer;
+    contactContainer.innerHTML += `
+        <details class="cv-dropdown">
+            <summary class="contact-btn cv-summary">
+                ${icons.download}
+                <span>CV</span>
+            </summary>
+            <div class="cv-menu">
+                <a class="cv-link" href="assets/felipedenardocv_pt-BR.pdf" download="felipedenardocv_pt-BR.pdf">PT-BR</a>
+                <a class="cv-link" href="assets/felipedenardocv_en-US.pdf" download="felipedenardocv_en-US.pdf">EN-US</a>
+            </div>
+        </details>`;
 
-    const skillsContainer = document.getElementById('skills-container');
-    skillsContainer.innerHTML = '';
+    // Navigation labels
+    document.getElementById('nav-home').textContent = data.nav.home;
+    document.getElementById('nav-skills').textContent = data.nav.skills;
+    document.getElementById('nav-experience').textContent = data.nav.experience;
+    document.getElementById('nav-highlights').textContent = data.nav.highlights;
+
+    // Summary & Highlights (Modified for Hero Summary)
+    document.getElementById('summary-text').innerHTML = data.summary;
+
+    const highlightsContainer = document.getElementById('highlights-container');
+    highlightsContainer.innerHTML = '';
+    data.highlights.forEach((h) => {
+        highlightsContainer.innerHTML += `
+            <div class="highlight-item">
+                <h4>${h.title}</h4>
+                <p>${h.description}</p>
+            </div>`;
+    });
+
+
+
+    // Skills Carousel
+    const skillsCarousel = document.getElementById('skills-carousel');
+    skillsCarousel.innerHTML = '';
+
+
     data.skills.forEach(cat => {
-        // Generating badges with new .skill-badge class
         const itemsHtml = cat.items.map(item =>
-            `<span class="skill-badge bg-slate-100 text-slate-700 hover:bg-sky-100 hover:text-sky-700">${item}</span>`
+            `<span class="skill-badge">${item}</span>`
         ).join('');
 
-        skillsContainer.innerHTML += `
-            <div>
-                <p class="font-bold text-slate-800 mb-2 text-xs uppercase tracking-wider flex items-center gap-2">
-                    <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
-                    ${cat.category}
-                </p>
-                <div class="flex flex-wrap gap-2">${itemsHtml}</div>
+        skillsCarousel.innerHTML += `
+            <div class="skill-card">
+                <h3 class="skill-category">${cat.category}</h3>
+                <div class="skill-items">${itemsHtml}</div>
             </div>`;
     });
 
-    const educationContainer = document.getElementById('education-container');
-    educationContainer.innerHTML = '';
-    data.education.forEach(edu => {
-        educationContainer.innerHTML += `
-            <div class="mb-6 relative">
-                <div class="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-slate-300 border-2 border-white"></div>
-                <h4 class="font-bold text-slate-900 text-base md:text-lg">${edu.degree}</h4>
-                <p class="font-medium">${edu.school}</p>
-                <p class="text-slate-500 text-sm mt-1">${edu.period}</p>
-            </div>`;
-    });
 
-    const langList = document.getElementById('languages-list');
-    langList.innerHTML = '';
-    data.languages.forEach(l => {
-        langList.innerHTML += `<li class="flex items-center gap-2"><span class="w-1 h-1 bg-slate-400 rounded-full"></span>${l}</li>`;
-    });
-
+    // Experience Accordion
     const expContainer = document.getElementById('experience-container');
     expContainer.innerHTML = '';
-    data.jobs.forEach((job, index) => {
-        const detailsHtml = job.details.map(d => `<li class="pl-1">${d}</li>`).join('');
 
-        // Timeline Item Structure (Centered Card Style)
+    data.jobs.forEach((job, index) => {
+        const detailsHtml = job.details.map(d => `<li>${d}</li>`).join('');
+        const stackHtml = job.stack ? `
+            <div class="experience-stack">
+                <p class="stack-label">Tech Stack</p>
+                <div class="stack-items">
+                    ${job.stack.split(',').map(s => `<span class="stack-badge">${s.trim()}</span>`).join('')}
+                </div>
+            </div>` : '';
+
         expContainer.innerHTML += `
-            <div class="timeline-item group fade-in-up" style="animation-delay: ${index * 100}ms">                
-                
-                <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-all sm:ml-4 relative">
-                    <div class="flex flex-col sm:flex-row justify-between items-start mb-3 gap-2">
+            <article class="experience-item">
+                <button class="experience-toggle" aria-expanded="false">
+                    <div class="experience-header">
                         <div>
-                            <h4 class="text-xl font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">${job.role}</h4>
-                            <p class="text-lg text-slate-500 font-medium">${job.company}</p>
+                            <h3 class="experience-role">${job.role}</h3>
+                            <p class="experience-company">${job.company}</p>
                         </div>
-                        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-600 whitespace-nowrap border border-slate-200">
-                            ${job.period}
-                        </span>
+                        <span class="experience-period">${job.period}</span>
                     </div>
-                    
-                    <ul class="space-y-3 text-slate-600 text-sm md:text-base mb-4 leading-relaxed marker:text-sky-400">
+                </button>
+                <div class="experience-content">
+                    <ul class="experience-details">
                         ${detailsHtml}
                     </ul>
-                    
-                    ${job.stack ? `
-                        <div class="mt-5 pt-4 border-t border-slate-50">
-                            <p class="text-xs text-slate-400 font-mono mb-2 uppercase tracking-wide">Tech Stack</p>
-                            <div class="flex flex-wrap gap-2 text-sm text-slate-600 font-medium">
-                                ${job.stack.split(',').map(s => `<span class="bg-slate-50 px-2 py-1 rounded text-slate-600 text-xs border border-slate-100">${s.trim()}</span>`).join('')}
-                            </div>
-                        </div>` : ''}
+                    ${stackHtml}
                 </div>
-            </div>`;
+            </article>`;
     });
+    bindExperienceToggles();
 
-    // Re-initialize icons for newly injected content
-    if (typeof feather !== 'undefined') {
-        feather.replace();
+    // Initialize Skills Carousel
+    if (!skillsCarouselInstance) {
+        skillsCarouselInstance = new Carousel({
+            wrapperId: 'skills-carousel',
+            prevBtnId: 'carousel-prev',
+            nextBtnId: 'carousel-next',
+            dotsId: 'carousel-dots',
+            cardClass: 'skill-card'
+        });
     }
+    skillsCarouselInstance.setTotalSlides(data.skills.length);
+
+    // Initial update
+    setTimeout(() => {
+        if (skillsCarouselInstance) skillsCarouselInstance.update();
+    }, 100);
+
 }
 
-const langSelect = document.getElementById('lang-select');
-langSelect.addEventListener('change', (e) => {
-    localStorage.setItem('lang', e.target.value);
-    renderPage(e.target.value);
+// Event Listeners
+const langDropdown = document.getElementById('lang-dropdown');
+const langCurrent = document.getElementById('lang-current');
+const langOptions = document.querySelectorAll('.lang-option');
+
+function updateLangLabel(lang) {
+    if (!langCurrent) return;
+    langCurrent.textContent = lang === 'en-US' ? '🇺🇸 EN' : '🇧🇷 PT';
+}
+
+function applyLanguage(lang) {
+    localStorage.setItem('lang', lang);
+    updateLangLabel(lang);
+    renderPage(lang);
+    if (langDropdown) langDropdown.removeAttribute('open');
+}
+
+langOptions.forEach((option) => {
+    option.addEventListener('click', () => {
+        const lang = option.getAttribute('data-lang');
+        if (!lang) return;
+        applyLanguage(lang);
+    });
 });
 
+document.addEventListener('click', (event) => {
+    const target = event.target;
+    if (!(target instanceof Node)) return;
+
+    document.querySelectorAll('.lang-dropdown, .cv-dropdown').forEach((dropdown) => {
+        if (!(dropdown instanceof HTMLElement)) return;
+        if (!dropdown.contains(target)) {
+            dropdown.removeAttribute('open');
+        }
+    });
+});
+
+const navToggle = document.getElementById('nav-toggle');
+const navLinksContainer = document.querySelector('.nav-links');
+
+if (navToggle && navLinksContainer) {
+    navToggle.addEventListener('click', () => {
+        const isOpen = navLinksContainer.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    document.querySelectorAll('.nav-link').forEach((link) => {
+        link.addEventListener('click', () => {
+            navLinksContainer.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+        });
+    });
+}
+
+
+
+// Active navigation link on scroll
+function updateActiveNav() {
+    const sections = ['home', 'skills', 'experience', 'highlights'];
+    const scrollPos = window.scrollY + 100;
+
+    sections.forEach(section => {
+        const element = document.getElementById(section);
+        const navLink = document.getElementById(`nav-${section}`);
+
+        if (element && navLink) {
+            const offsetTop = element.offsetTop;
+            const offsetBottom = offsetTop + element.offsetHeight;
+
+            if (scrollPos >= offsetTop && scrollPos < offsetBottom) {
+                document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+                navLink.classList.add('active');
+            }
+        }
+    });
+}
+
+window.addEventListener('scroll', updateActiveNav);
+
+// Keyboard navigation
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') {
+        if (skillsCarouselInstance) skillsCarouselInstance.prevSlide();
+    }
+    if (e.key === 'ArrowRight') {
+        if (skillsCarouselInstance) skillsCarouselInstance.nextSlide();
+    }
+});
+
+// Initialize
 window.onload = () => {
     const savedLang = localStorage.getItem('lang') || 'pt-BR';
-    langSelect.value = savedLang;
+    updateLangLabel(savedLang);
     renderPage(savedLang);
+    updateActiveNav();
 };
