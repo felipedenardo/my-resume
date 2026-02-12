@@ -598,13 +598,14 @@ body::before {
     width: 100%;
     border: 0;
     background: transparent;
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 3rem 1.5rem 2rem;
     text-align: left;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 0.75rem;
+    position: relative;
 }
 
 .experience-toggle::after {
@@ -612,10 +613,14 @@ body::before {
     color: var(--text-light);
     font-size: 1.1rem;
     transition: transform 0.25s ease;
+    position: absolute;
+    right: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .experience-item.expanded .experience-toggle::after {
-    transform: rotate(180deg);
+    transform: translateY(-50%) rotate(180deg);
 }
 
 .experience-header {
@@ -965,7 +970,7 @@ body::before {
     }
 
     .experience-toggle {
-        padding: 1.25rem;
+        padding: 1.25rem 2.75rem 1.25rem 1.25rem;
     }
 
     .experience-content {
