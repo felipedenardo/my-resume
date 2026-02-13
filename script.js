@@ -26,22 +26,22 @@ const contentData = {
         highlights: [
             {
                 title: "Performance e Otimização",
-                description: "Histórico comprovado na resolução de gargalos críticos, alcançando reduções de até 80% no tempo de resposta de APIs. Especialista em tuning de queries, implementação estratégica de cache com Redis e otimização de payloads via DTOs, garantindo alta eficiência no tráfego de dados."
+                description: "Histórico comprovado na resolução de gargalos críticos, alcançando <strong>reduções de até 80% no tempo de resposta de APIs</strong>. Aplicação de <strong>tuning de queries</strong>, implementação estratégica de cache com <strong>Redis</strong> e <strong>otimização de payloads via DTOs</strong>, garantindo alta eficiência no tráfego de dados."
             },
             {
                 title: "Arquitetura de Eventos",
-                description: "Definição e implementação de mensageria com RabbitMQ para processamento assíncrono e desacoplamento de serviços."
+                description: "Implementação de mensageria com <strong>RabbitMQ</strong> para processamento assíncrono e desacoplamento de serviços, reduzindo tempos de batch em <strong>~96%</strong>."
             },
             {
                 title: "Visão de Produto",
-                description: "Atuação estratégica junto a stakeholders para traduzir requisitos de negócio em arquiteturas técnicas robustas, escaláveis e de fácil manutenção."
+                description: "Atuação estratégica junto a stakeholders para traduzir requisitos de negócio em <strong>arquiteturas técnicas robustas, escaláveis</strong> e de fácil manutenção."
             }
         ],
         skills: [
             { category: "Backend", items: ["Golang", "Java 8+", "Microservices", "Spring (Boot, Data, Security)", "JWT", "ORM (GORM & Hibernate)", "Gin Gonic", "Groovy/Grails", "JSF", "Swagger / OpenAPI", "REST APIs", "Desenvolvimento de Shared Libraries", "Arquitetura Hexagonal / Clean Architecture"] },
-            { category: "Banco de Dados e Mensageria", items: ["PostgreSQL", "MySQL", "SQL Server", "Redis", "RabbitMQ", "Event-Driven Architecture", "JSEND Pattern"] },
+            { category: "Banco de Dados e Mensageria", items: ["PostgreSQL", "MySQL", "SQL Server", "Redis", "RabbitMQ", "Event-Driven Architecture", "Elasticsearch"] },
             { category: "DevOps e Cloud", items: ["Docker", "Docker Compose Multi-Service", "AWS (S3, IAM, EC2)", "Linux", "Git"] },
-            { category: "Conceitos e Práticas", items: ["Clean Code", "Strongly Typed Domain", "Scrum", "Kanban", "Modelagem de Dados", "Tuning de Performance"] },
+            { category: "Conceitos e Práticas", items: ["Clean Code", "Strongly Typed Domain", "Scrum", "Kanban", "Modelagem de Dados", "Tuning de Performance", "JSEND Pattern"] },
             { category: "Frontend", items: ["Vue.js", "Angular 2+", "TypeScript", "JavaScript", "Material Design", "Bootstrap", "PrimeFaces"] },
         ],
         jobs: [
@@ -49,13 +49,14 @@ const contentData = {
                 role: "Senior Backend Engineer",
                 period: "Fev/2020 - Atual",
                 company: "CWS Platform",
-                stack: "Golang (GORM), Groovy/Grails, MySQL, PostgreSQL, Redis, RabbitMQ, Docker, AWS S3, Vue.js, React.",
+                stack: "Golang (GORM), Groovy/Grails, MySQL, PostgreSQL, Redis, RabbitMQ, Elasticsearch, Docker, AWS S3, Vue.js, React.",
                 details: [
-                    "<strong>Arquitetura e Design:</strong> Liderança técnica no desenvolvimento de microsserviços em <strong>Golang</strong>, aplicando princípios de <strong>Clean Architecture</strong> para isolar o domínio de negócio das dependências de infraestrutura, elevando a cobertura de testes e a manutenibilidade do ecossistema.",
-                    "<strong>Otimização de Performance:</strong> Responsável pela <strong>redução de 80% na latência de APIs</strong> críticas através da refatoração de lógicas ineficientes, <strong>otimização de consultas MySQL</strong> (análise de índices e planos de execução) e implementação de cache estratégico com <strong>Redis</strong>.",
-                    "<strong>Sistemas Distribuídos:</strong> Implementação de mensageria com <strong>RabbitMQ</strong> para processamento assíncrono e arquiteturas orientadas a eventos, garantindo a escalabilidade do ambiente de produção.",
-                    "<strong>Modernização e Qualidade:</strong> Atuação na evolução de sistemas legados, reduzindo o débito técnico e elevando a régua de qualidade do time através de <strong>Code Reviews</strong> e mentoria técnica.",
-                    "<strong>Integração Full Stack:</strong> Desenvolvimento de interfaces dinâmicas em <strong>Vue.js</strong> e <strong>React</strong>, assegurando a integração fluida entre o frontend e as APIs em Go/Groovy."
+                    "<strong>Arquitetura e Design:</strong> Liderança técnica no desenvolvimento de microsserviços em <strong>Golang</strong>, aplicando <strong>Clean Architecture</strong> para isolar o domínio de negócio, elevando a cobertura de testes e a manutenibilidade do ecossistema.",
+                    "<strong>Otimização de Performance:</strong> Redução de <strong>80% na latência de APIs</strong> através da refatoração de lógicas, otimização de consultas <strong>MySQL</strong> (índices e planos de execução) e implementação de cache estratégico com <strong>Redis</strong>.",
+                    "<strong>Sistemas de Alta Disponibilidade:</strong> Implementação de pipeline assíncrono em duas fases (light/heavy) para importação de planilhas SKU com <strong>RabbitMQ</strong> e staging, reduzindo o tempo de processamento em ~96% (50s para 2s) e eliminando timeouts/locks no banco de dados.",
+                    "<strong>Busca e Dados (Elasticsearch):</strong> Otimização de queries e estratégias de reindexação no <strong>Elasticsearch</strong>, melhorando significativamente a relevância e performance da busca.",
+                    "<strong>Modernização e Liderança:</strong> Redução de débito técnico em sistemas legados e mentoria técnica ao time através de <strong>Code Reviews</strong> rigorosos, elevando a régua de qualidade da engenharia.",
+                    "<strong>Integração Full Stack:</strong> Desenvolvimento de interfaces dinâmicas em <strong>Vue.js</strong> e <strong>React</strong>, garantindo integração fluida com APIs em <strong>Go</strong> e <strong>Groovy</strong>."
                 ]
             },
             {
@@ -111,22 +112,22 @@ const contentData = {
         highlights: [
             {
                 title: "Performance & Optimization",
-                description: "Proven track record in resolving critical bottlenecks, achieving up to 80% reduction in API response times. Expert in query tuning, strategic cache implementation with Redis, and payload optimization via DTOs, ensuring high efficiency in data traffic."
+                description: "Proven track record in resolving critical bottlenecks, achieving <strong>up to 80% reduction in API response times</strong>. Applying <strong>query tuning</strong>, strategic <strong>Redis</strong> caching, and <strong>payload optimization and data integrity via DTOs</strong>, ensuring high-throughput data efficiency."
             },
             {
                 title: "Event-Driven Architecture",
-                description: "Definition and implementation of messaging with RabbitMQ for asynchronous processing and service decoupling."
+                description: "Specialized in implementing asynchronous messaging with <strong>RabbitMQ</strong> to decouple services, resulting in a <strong>~96%</strong> reduction in batch processing times and significantly improved system scalability."
             },
             {
                 title: "Product Vision",
-                description: "Strategic collaboration with stakeholders to translate business requirements into robust, scalable, and maintainable technical architectures."
+                description: "Strategic collaborator with stakeholders, adept at translating complex business requirements into <strong>robust, scalable</strong>, and maintainable technical architectures."
             }
         ],
         skills: [
             { category: "Backend", items: ["Golang", "Java 8+", "Microservices", "Spring (Boot, Data, Security)", "JWT", "ORM (GORM & Hibernate)", "Gin Gonic", "Groovy/Grails", "JSF", "Swagger / OpenAPI", "REST APIs", "Shared Libraries Development", "Hexagonal / Clean Architecture"] },
-            { category: "Databases & Messaging", items: ["PostgreSQL", "MySQL", "SQL Server", "Redis", "RabbitMQ", "Event-Driven Architecture", "JSEND Pattern"] },
+            { category: "Databases & Messaging", items: ["PostgreSQL", "MySQL", "SQL Server", "Redis", "RabbitMQ", "Event-Driven Architecture", "Elasticsearch"] },
             { category: "DevOps & Cloud", items: ["Docker", "Docker Compose Multi-Service", "AWS (S3, IAM, EC2)", "Linux", "Git"] },
-            { category: "Core Competencies", items: ["Clean Code", "SOLID", "Strongly Typed Domain", "Scrum", "Kanban", "Data Modeling", "Performance Tuning"] },
+            { category: "Core Competencies", items: ["Clean Code", "SOLID", "Strongly Typed Domain", "Scrum", "Kanban", "Data Modeling", "Performance Tuning", "JSEND Pattern"] },
             { category: "Frontend", items: ["Vue.js", "Angular 2+", "TypeScript", "JavaScript", "Material Design", "Bootstrap", "PrimeFaces"] },
         ],
         jobs: [
@@ -134,13 +135,14 @@ const contentData = {
                 role: "Senior Backend Engineer",
                 period: "Feb/2020 - Present",
                 company: "CWS Platform",
-                stack: "Golang (GORM), Groovy/Grails, MySQL, PostgreSQL, Redis, RabbitMQ, Docker, AWS S3, Vue.js, React.",
+                stack: "Golang (GORM), Groovy/Grails, MySQL, PostgreSQL, Redis, RabbitMQ, Elasticsearch, Docker, AWS S3, Vue.js, React.",
                 details: [
-                    "<strong>Architecture & Design:</strong> Technical leadership in Golang microservices,applying <strong>Clean Architecture</strong> to isolate the business domain from infrastructure dependencies, significantly increasing test coverage and ecosystem maintainability.",
-                    "<strong>Performance Optimization:</strong> Responsible for an <strong>80% reduction in critical API latency</strong> by refactoring inefficient logic, <strong>optimizing MySQL queries</strong> (index analysis and execution plans), and implementing strategic caching with <strong>Redis</strong>.",
-                    "<strong>Distributed Systems:</strong> Implemented messaging with <strong>RabbitMQ</strong> for asynchronous processing and event-driven architectures, ensuring production environment scalability.",
-                    "<strong>Modernization & Quality:</strong> Led the evolution of legacy systems, reducing technical debt and raising the team's quality bar through <strong>Code Reviews</strong> and technical mentorship.",
-                    "<strong>Full Stack Integration:</strong> Developed dynamic interfaces in <strong>Vue.js</strong> and <strong>React</strong>, ensuring seamless integration between frontend layers and Go/Groovy APIs."
+                    "<strong>Architecture & Design:</strong> Technical lead in <strong>Golang</strong> microservices development, applying <strong>Clean Architecture</strong> principles to decouple business domains from infrastructure, significantly increasing test coverage and ecosystem maintainability.",
+                    "<strong>Performance Optimization:</strong> Achieved an <strong>80% reduction in API latency</strong> by refactoring inefficient logic, optimizing <strong>MySQL</strong> queries (index analysis and execution plans), and implementing strategic caching with <strong>Redis</strong>.",
+                    "<strong>High-Availability Systems:</strong> Engineered a two-phase (light/heavy) asynchronous pipeline for SKU spreadsheet imports using <strong>RabbitMQ</strong> and staging areas, slashing effective processing time by ~96% (from ~50s to 2s) and eliminating database timeouts/locks.",
+                    "<strong>Search & Data (Elasticsearch):</strong> Optimized search queries and reindexing strategies in <strong>Elasticsearch</strong>, significantly improving both search relevance and system throughput.",
+                    "<strong>Modernization & Leadership:</strong> Reduced technical debt in legacy systems and raised the engineering bar through technical mentorship and rigorous <strong>Code Reviews</strong>, fostering a culture of high-quality code.",
+                    "<strong>Full-Stack Integration:</strong> Developed dynamic interfaces using <strong>Vue.js</strong> and <strong>React</strong>, ensuring seamless integration between frontend applications and <strong>Go</strong>/<strong>Groovy</strong> APIs."
                 ]
             },
             {
