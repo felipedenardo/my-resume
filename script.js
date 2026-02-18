@@ -303,6 +303,44 @@ class Carousel {
 }
 
 let skillsCarouselInstance;
+function updateSkillsCarouselHeight() {
+    const wrapper = document.getElementById('skills-carousel');
+    if (!wrapper) return;
+
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    if (!isMobile) {
+        wrapper.style.height = '';
+        return;
+    }
+
+    const cards = wrapper.querySelectorAll('.skill-card');
+    if (cards.length === 0) return;
+
+    let maxHeight = 0;
+    cards.forEach((card) => {
+        const clone = card.cloneNode(true);
+        clone.classList.add('active');
+        clone.style.position = 'absolute';
+        clone.style.visibility = 'hidden';
+        clone.style.pointerEvents = 'none';
+        clone.style.display = 'block';
+        clone.style.width = '96%';
+        clone.style.maxWidth = '96%';
+        clone.style.left = '0';
+        clone.style.top = '0';
+        wrapper.appendChild(clone);
+
+        const height = clone.getBoundingClientRect().height;
+        if (height > maxHeight) maxHeight = height;
+
+        wrapper.removeChild(clone);
+    });
+
+    if (maxHeight > 0) {
+        wrapper.style.height = `${Math.ceil(maxHeight)}px`;
+    }
+}
+
 function bindExperienceToggles() {
     const experienceButtons = document.querySelectorAll('.experience-toggle');
     experienceButtons.forEach((button) => {
@@ -466,6 +504,7 @@ function renderPage(lang) {
     // Initial update
     setTimeout(() => {
         if (skillsCarouselInstance) skillsCarouselInstance.update();
+        updateSkillsCarouselHeight();
     }, 100);
 
 }
@@ -474,15 +513,44 @@ function renderPage(lang) {
 const langDropdown = document.getElementById('lang-dropdown');
 const langCurrent = document.getElementById('lang-current');
 const langOptions = document.querySelectorAll('.lang-option');
+const themeDropdown = document.getElementById('theme-dropdown');
+const themeCurrent = document.getElementById('theme-current');
+const themeOptions = document.querySelectorAll('.theme-option');
+const themeMeta = document.querySelector('meta[name="theme-color"]');
 
 function updateLangLabel(lang) {
     if (!langCurrent) return;
     langCurrent.textContent = lang === 'en-US' ? '🇺🇸 EN' : '🇧🇷 PT';
 }
 
+function updateThemeLabel(theme) {
+    if (!themeCurrent) return;
+    const lang = localStorage.getItem('lang') || 'pt-BR';
+    const labels = {
+        "pt-BR": { light: "Tema: Claro", dark: "Tema: Escuro" },
+        "en-US": { light: "Theme: Light", dark: "Theme: Dark" }
+    };
+    const normalized = theme === 'dark' ? 'dark' : 'light';
+    const dict = labels[lang] || labels["en-US"];
+    themeCurrent.textContent = dict[normalized];
+}
+
+function applyTheme(theme) {
+    const normalized = theme === 'dark' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', normalized);
+    localStorage.setItem('theme', normalized);
+    updateThemeLabel(normalized);
+    if (themeDropdown) themeDropdown.removeAttribute('open');
+    if (themeMeta) {
+        themeMeta.setAttribute('content', normalized === 'dark' ? '#0b1020' : '#667eea');
+    }
+}
+
 function applyLanguage(lang) {
     localStorage.setItem('lang', lang);
     updateLangLabel(lang);
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    updateThemeLabel(savedTheme);
     renderPage(lang);
     if (langDropdown) langDropdown.removeAttribute('open');
 }
@@ -495,11 +563,19 @@ langOptions.forEach((option) => {
     });
 });
 
+themeOptions.forEach((option) => {
+    option.addEventListener('click', () => {
+        const theme = option.getAttribute('data-theme');
+        if (!theme) return;
+        applyTheme(theme);
+    });
+});
+
 document.addEventListener('click', (event) => {
     const target = event.target;
     if (!(target instanceof Node)) return;
 
-    document.querySelectorAll('.lang-dropdown, .cv-dropdown').forEach((dropdown) => {
+    document.querySelectorAll('.lang-dropdown, .theme-dropdown, .cv-dropdown').forEach((dropdown) => {
         if (!(dropdown instanceof HTMLElement)) return;
         if (!dropdown.contains(target)) {
             dropdown.removeAttribute('open');
@@ -548,6 +624,7 @@ function updateActiveNav() {
 }
 
 window.addEventListener('scroll', updateActiveNav);
+window.addEventListener('resize', updateSkillsCarouselHeight);
 
 // Keyboard navigation
 document.addEventListener('keydown', (e) => {
@@ -562,7 +639,10 @@ document.addEventListener('keydown', (e) => {
 // Initialize
 window.onload = () => {
     const savedLang = localStorage.getItem('lang') || 'pt-BR';
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    applyTheme(savedTheme);
     updateLangLabel(savedLang);
     renderPage(savedLang);
     updateActiveNav();
+    updateSkillsCarouselHeight();
 };
