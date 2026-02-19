@@ -22,6 +22,15 @@ const contentData = {
             highlights: "Diferenciais",
             education: "Educação"
         },
+        labels: {
+            techStack: "Tech Stack",
+            results: "Resultados"
+        },
+        highlightsMeta: {
+            eyebrow: "Diferenciais",
+            title: "Destaques que geram impacto",
+            lead: "Resultados mensuráveis, decisões técnicas sólidas e foco em eficiência."
+        },
         summary: "<b>Senior Backend Engineer</b> com mais de 8 anos de experiência na construção de sistemas distribuídos e arquitetura de microsserviços. Especialista em <b>Golang</b> e <b>Java</b>, com foco em soluções de alta disponibilidade e resiliência. Ampla experiência na aplicação de <b>Clean Architecture</b>, priorizando o desacoplamento da lógica de negócio e a independência de infraestrutura para garantir sistemas testáveis e de fácil manutenção. Experiência complementar em <b>frontend</b>, assegurando a entrega de integrações eficientes de ponta a ponta.",
         highlights: [
             {
@@ -50,6 +59,7 @@ const contentData = {
                 period: "Fev/2020 - Atual",
                 company: "CWS Platform",
                 stack: "Golang (GORM), Groovy/Grails, MySQL, PostgreSQL, Redis, RabbitMQ, Elasticsearch, Docker, AWS S3, Vue.js, React.",
+                results: ["-80% latência de APIs", "~96% redução em batch", "+resiliência em importações"],
                 details: [
                     "<strong>Arquitetura e Design:</strong> Liderança técnica no desenvolvimento de microsserviços em <strong>Golang</strong>, aplicando <strong>Clean Architecture</strong> para isolar o domínio de negócio, elevando a cobertura de testes e a manutenibilidade do ecossistema.",
                     "<strong>Otimização de Performance:</strong> Redução de <strong>80% na latência de APIs</strong> através da refatoração de lógicas, otimização de consultas <strong>MySQL</strong> (índices e planos de execução) e implementação de cache estratégico com <strong>Redis</strong>.",
@@ -108,6 +118,15 @@ const contentData = {
             highlights: "Highlights",
             education: "Education"
         },
+        labels: {
+            techStack: "Tech Stack",
+            results: "Results"
+        },
+        highlightsMeta: {
+            eyebrow: "Highlights",
+            title: "Impact Highlights",
+            lead: "Measurable outcomes, sound technical decisions, and relentless focus on efficiency."
+        },
         summary: "<b>Senior Backend Engineer</b> with over 8 years of experience building distributed systems and microservices architecture. Expert in <b>Golang</b> and <b>Java</b>, focusing on high availability and resilience solutions. Extensive experience applying <b>Clean Architecture</b>, prioritizing decoupling of business logic and infrastructure independence to ensure testable and maintainable systems. Complementary <b>frontend</b> experience, ensuring the delivery of efficient end-to-end integrations.",
         highlights: [
             {
@@ -136,6 +155,7 @@ const contentData = {
                 period: "Feb/2020 - Present",
                 company: "CWS Platform",
                 stack: "Golang (GORM), Groovy/Grails, MySQL, PostgreSQL, Redis, RabbitMQ, Elasticsearch, Docker, AWS S3, Vue.js, React.",
+                results: ["-80% API latency", "~96% batch reduction", "Higher import resilience"],
                 details: [
                     "<strong>Architecture & Design:</strong> Technical lead in <strong>Golang</strong> microservices development, applying <strong>Clean Architecture</strong> principles to decouple business domains from infrastructure, significantly increasing test coverage and ecosystem maintainability.",
                     "<strong>Performance Optimization:</strong> Achieved an <strong>80% reduction in API latency</strong> by refactoring inefficient logic, optimizing <strong>MySQL</strong> queries (index analysis and execution plans), and implementing strategic caching with <strong>Redis</strong>.",
@@ -421,6 +441,13 @@ function renderPage(lang) {
     document.getElementById('nav-experience').textContent = data.nav.experience;
     document.getElementById('nav-highlights').textContent = data.nav.highlights;
 
+    if (data.highlightsMeta) {
+        document.getElementById('highlights-eyebrow').textContent = data.highlightsMeta.eyebrow;
+        document.getElementById('highlights-title').textContent = data.highlightsMeta.title;
+        document.getElementById('highlights-lead').textContent = data.highlightsMeta.lead;
+    }
+
+
     // Summary & Highlights (Modified for Hero Summary)
     document.getElementById('summary-text').innerHTML = data.summary;
 
@@ -433,6 +460,7 @@ function renderPage(lang) {
                 <p>${h.description}</p>
             </div>`;
     });
+
 
 
 
@@ -459,18 +487,26 @@ function renderPage(lang) {
     expContainer.innerHTML = '';
 
     data.jobs.forEach((job, index) => {
+        const isCurrent = index === 0;
         const detailsHtml = job.details.map(d => `<li>${d}</li>`).join('');
+        const resultsHtml = job.results ? `
+            <div class="experience-results">
+                <p class="results-label">${data.labels?.results || 'Results'}</p>
+                <div class="results-items">
+                    ${job.results.map(r => `<span class="result-badge">${r}</span>`).join('')}
+                </div>
+            </div>` : '';
         const stackHtml = job.stack ? `
             <div class="experience-stack">
-                <p class="stack-label">Tech Stack</p>
+                <p class="stack-label">${data.labels?.techStack || 'Tech Stack'}</p>
                 <div class="stack-items">
                     ${job.stack.split(',').map(s => `<span class="stack-badge">${s.trim()}</span>`).join('')}
                 </div>
             </div>` : '';
 
         expContainer.innerHTML += `
-            <article class="experience-item">
-                <button class="experience-toggle" aria-expanded="false">
+            <article class="experience-item ${isCurrent ? 'expanded' : ''}">
+                <button class="experience-toggle" aria-expanded="${isCurrent ? 'true' : 'false'}">
                     <div class="experience-header">
                         <div>
                             <h3 class="experience-role">${job.role}</h3>
@@ -480,6 +516,7 @@ function renderPage(lang) {
                     </div>
                 </button>
                 <div class="experience-content">
+                    ${resultsHtml}
                     <ul class="experience-details">
                         ${detailsHtml}
                     </ul>
