@@ -378,9 +378,10 @@ function bindExperienceToggles() {
             const isExpanded = shouldExpand;
             if (shouldExpand) {
                 item.classList.add('expanded');
+                // Wait for the collapse/expand CSS transition (0.35s) to finish before scrolling
                 setTimeout(() => {
                     item.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }, 100);
+                }, 360);
             }
             button.setAttribute('aria-expanded', String(isExpanded));
         });
