@@ -673,6 +673,7 @@ html:not([data-theme="dark"]) .nav-header {
     box-shadow: var(--shadow-card);
     transition: all 0.25s ease;
     overflow: hidden;
+    scroll-margin-top: 100px;
 }
 
 .experience-toggle {

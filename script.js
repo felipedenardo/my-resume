@@ -376,7 +376,12 @@ function bindExperienceToggles() {
             });
 
             const isExpanded = shouldExpand;
-            if (shouldExpand) item.classList.add('expanded');
+            if (shouldExpand) {
+                item.classList.add('expanded');
+                setTimeout(() => {
+                    item.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            }
             button.setAttribute('aria-expanded', String(isExpanded));
         });
     });
