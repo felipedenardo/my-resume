@@ -50,7 +50,7 @@ const contentData = {
             { category: "Backend", items: ["Golang", "Java 8+", "Microservices", "Spring (Boot, Data, Security)", "JWT", "ORM (GORM & Hibernate)", "Gin Gonic", "Groovy/Grails", "JSF", "Swagger / OpenAPI", "REST APIs", "Desenvolvimento de Shared Libraries", "Arquitetura Hexagonal / Clean Architecture"] },
             { category: "Banco de Dados e Mensageria", items: ["PostgreSQL", "MySQL", "SQL Server", "Redis", "RabbitMQ", "Event-Driven Architecture", "Elasticsearch"] },
             { category: "DevOps e Cloud", items: ["Docker", "Docker Compose Multi-Service", "AWS (S3, IAM, EC2)", "Linux", "Git"] },
-            { category: "Conceitos e Práticas", items: ["Clean Code", "Strongly Typed Domain", "Scrum", "Kanban", "Modelagem de Dados", "Tuning de Performance", "JSEND Pattern"] },
+            { category: "Conceitos e Práticas", items: ["Clean Code", "SOLID", "Domínio Fortemente Tipado (Strongly Typed Domain)", "Testes Unitários e de Integração (TDD, Table-Driven Tests)", "Scrum", "Kanban", "Modelagem de Dados", "Tuning de Performance", "Padrão JSEND"] },
             { category: "Frontend", items: ["Vue.js", "Angular 2+", "TypeScript", "JavaScript", "Material Design", "Bootstrap", "PrimeFaces"] },
         ],
         jobs: [
@@ -61,7 +61,7 @@ const contentData = {
                 stack: "Golang (GORM), Groovy/Grails, MySQL, PostgreSQL, Redis, RabbitMQ, Elasticsearch, Docker, AWS S3, Vue.js, React.",
                 results: ["-80% latência de APIs", "~96% redução em batch", "+resiliência em importações"],
                 details: [
-                    "<strong>Arquitetura e Design:</strong> Liderança técnica no desenvolvimento de microsserviços em <strong>Golang</strong>, aplicando <strong>Clean Architecture</strong> para isolar o domínio de negócio, elevando a cobertura de testes e a manutenibilidade do ecossistema.",
+                    "<strong>Arquitetura e Design:</strong> Liderança técnica no desenvolvimento de microsserviços em <strong>Golang</strong> sob <strong>Clean Architecture</strong>, estabelecendo padrões de <strong>Testes Unitários (Table-Driven)</strong> e de <strong>Integração</strong>. O foco na testabilidade do domínio resultou em um sistema altamente desacoplado e resiliente a falhas.",
                     "<strong>Otimização de Performance:</strong> Redução de <strong>80% na latência de APIs</strong> através da refatoração de lógicas, otimização de consultas <strong>MySQL</strong> (índices e planos de execução) e implementação de cache estratégico com <strong>Redis</strong>.",
                     "<strong>Sistemas de Alta Disponibilidade:</strong> Implementação de pipeline assíncrono em duas fases (light/heavy) para importação de planilhas SKU com <strong>RabbitMQ</strong> e staging, reduzindo o tempo de processamento em ~96% (50s para 2s) e eliminando timeouts/locks no banco de dados.",
                     "<strong>Busca e Dados (Elasticsearch):</strong> Otimização de queries e estratégias de reindexação no <strong>Elasticsearch</strong>, melhorando significativamente a relevância e performance da busca.",
@@ -146,7 +146,7 @@ const contentData = {
             { category: "Backend", items: ["Golang", "Java 8+", "Microservices", "Spring (Boot, Data, Security)", "JWT", "ORM (GORM & Hibernate)", "Gin Gonic", "Groovy/Grails", "JSF", "Swagger / OpenAPI", "REST APIs", "Shared Libraries Development", "Hexagonal / Clean Architecture"] },
             { category: "Databases & Messaging", items: ["PostgreSQL", "MySQL", "SQL Server", "Redis", "RabbitMQ", "Event-Driven Architecture", "Elasticsearch"] },
             { category: "DevOps & Cloud", items: ["Docker", "Docker Compose Multi-Service", "AWS (S3, IAM, EC2)", "Linux", "Git"] },
-            { category: "Core Competencies", items: ["Clean Code", "SOLID", "Strongly Typed Domain", "Scrum", "Kanban", "Data Modeling", "Performance Tuning", "JSEND Pattern"] },
+            { category: "Core Competencies", items: ["Clean Code", "SOLID", "Strongly Typed Domain", "TDD & Unit Testing (Table-Driven)", "Scrum", "Kanban", "Data Modeling", "Performance Tuning", "JSEND Pattern"] },
             { category: "Frontend", items: ["Vue.js", "Angular 2+", "TypeScript", "JavaScript", "Material Design", "Bootstrap", "PrimeFaces"] },
         ],
         jobs: [
@@ -157,7 +157,7 @@ const contentData = {
                 stack: "Golang (GORM), Groovy/Grails, MySQL, PostgreSQL, Redis, RabbitMQ, Elasticsearch, Docker, AWS S3, Vue.js, React.",
                 results: ["-80% API latency", "~96% batch reduction", "Higher import resilience"],
                 details: [
-                    "<strong>Architecture & Design:</strong> Technical lead in <strong>Golang</strong> microservices development, applying <strong>Clean Architecture</strong> principles to decouple business domains from infrastructure, significantly increasing test coverage and ecosystem maintainability.",
+                    "<strong>Architecture & Design:</strong> Technical lead in <strong>Golang</strong> microservices development, applying <strong>Clean Architecture</strong> to decouple business logic from infrastructure. Established high-quality standards through <strong>Table-Driven Unit Testing</strong> and <strong>Integration Tests</strong>, ensuring a resilient and highly maintainable ecosystem.",
                     "<strong>Performance Optimization:</strong> Achieved an <strong>80% reduction in API latency</strong> by refactoring inefficient logic, optimizing <strong>MySQL</strong> queries (index analysis and execution plans), and implementing strategic caching with <strong>Redis</strong>.",
                     "<strong>High-Availability Systems:</strong> Engineered a two-phase (light/heavy) asynchronous pipeline for SKU spreadsheet imports using <strong>RabbitMQ</strong> and staging areas, slashing effective processing time by ~96% (from ~50s to 2s) and eliminating database timeouts/locks.",
                     "<strong>Search & Data (Elasticsearch):</strong> Optimized search queries and reindexing strategies in <strong>Elasticsearch</strong>, significantly improving both search relevance and system throughput.",
@@ -361,36 +361,6 @@ function updateSkillsCarouselHeight() {
     }
 }
 
-function bindExperienceToggles() {
-    const experienceButtons = document.querySelectorAll('.experience-toggle');
-    experienceButtons.forEach((button) => {
-        button.addEventListener('click', () => {
-            const item = button.closest('.experience-item');
-            if (!item) return;
-
-            const shouldExpand = !item.classList.contains('expanded');
-            document.querySelectorAll('.experience-item.expanded').forEach((openItem) => {
-                openItem.classList.remove('expanded');
-                const openButton = openItem.querySelector('.experience-toggle');
-                if (openButton) openButton.setAttribute('aria-expanded', 'false');
-            });
-
-            const isExpanded = shouldExpand;
-            if (shouldExpand) {
-                item.classList.add('expanded');
-                // Wait for the collapse/expand CSS transition (0.35s) to finish before scrolling
-                setTimeout(() => {
-                    item.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }, 360);
-            }
-            button.setAttribute('aria-expanded', String(isExpanded));
-        });
-    });
-}
-
-
-
-
 function renderPage(lang) {
     const data = contentData[lang];
     if (!data) return;
@@ -492,8 +462,7 @@ function renderPage(lang) {
     const expContainer = document.getElementById('experience-container');
     expContainer.innerHTML = '';
 
-    data.jobs.forEach((job, index) => {
-        const isCurrent = index === 0;
+    data.jobs.forEach((job) => {
         const detailsHtml = job.details.map(d => `<li>${d}</li>`).join('');
         const resultsHtml = job.results ? `
             <div class="experience-results">
@@ -511,16 +480,14 @@ function renderPage(lang) {
             </div>` : '';
 
         expContainer.innerHTML += `
-            <article class="experience-item ${isCurrent ? 'expanded' : ''}">
-                <button class="experience-toggle" aria-expanded="${isCurrent ? 'true' : 'false'}">
-                    <div class="experience-header">
-                        <div>
-                            <h3 class="experience-role">${job.role}</h3>
-                            <p class="experience-company">${job.company}</p>
-                        </div>
-                        <span class="experience-period">${job.period}</span>
+            <article class="experience-card">
+                <div class="experience-header">
+                    <div>
+                        <h3 class="experience-role">${job.role}</h3>
+                        <p class="experience-company">${job.company}</p>
                     </div>
-                </button>
+                    <span class="experience-period">${job.period}</span>
+                </div>
                 <div class="experience-content">
                     ${resultsHtml}
                     <ul class="experience-details">
@@ -530,7 +497,6 @@ function renderPage(lang) {
                 </div>
             </article>`;
     });
-    bindExperienceToggles();
 
     // Initialize Skills Carousel
     if (!skillsCarouselInstance) {

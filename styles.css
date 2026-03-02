@@ -666,43 +666,19 @@ html:not([data-theme="dark"]) .nav-header {
     width: 100%;
 }
 
-.experience-item {
+.experience-card {
     background: var(--surface);
     border-radius: 20px;
     border: 2px solid var(--border-color);
     box-shadow: var(--shadow-card);
-    transition: all 0.25s ease;
-    overflow: hidden;
-    scroll-margin-top: 100px;
+    padding: 1.6rem 2rem 1.75rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-.experience-toggle {
-    width: 100%;
-    border: 0;
-    background: transparent;
-    padding: 1.5rem 3rem 1.5rem 2rem;
-    text-align: left;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 0.75rem;
-    position: relative;
-}
-
-.experience-toggle::after {
-    content: '▾';
-    color: var(--text-light);
-    font-size: 1.1rem;
-    transition: transform 0.25s ease;
-    position: absolute;
-    right: 1.25rem;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.experience-item.expanded .experience-toggle::after {
-    transform: translateY(-50%) rotate(180deg);
+.experience-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(79, 172, 254, 0.35);
+    box-shadow: var(--shadow-pop);
 }
 
 .experience-header {
@@ -721,7 +697,7 @@ html:not([data-theme="dark"]) .nav-header {
     margin-bottom: 0.35rem;
 }
 
-.experience-item.expanded .experience-role {
+.experience-card .experience-role {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -748,17 +724,7 @@ html:not([data-theme="dark"]) .nav-header {
 }
 
 .experience-content {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: max-height 0.35s ease, opacity 0.2s ease;
-    padding: 0 2rem;
-}
-
-.experience-item.expanded .experience-content {
-    max-height: 2500px;
-    opacity: 1;
-    padding: 0 2rem 1.75rem;
+    margin-top: 1.3rem;
 }
 
 .experience-details {
@@ -1155,16 +1121,8 @@ html:not([data-theme="dark"]) .nav-header {
     }
 
 
-    .experience-toggle {
-        padding: 1.25rem 2.75rem 1.25rem 1.25rem;
-    }
-
-    .experience-content {
-        padding: 0 1.25rem;
-    }
-
-    .experience-item.expanded .experience-content {
-        padding: 0 1.25rem 1.25rem;
+    .experience-card {
+        padding: 1.25rem 1.25rem 1.35rem;
     }
 
     .experience-header {
