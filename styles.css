@@ -503,7 +503,7 @@ html:not([data-theme="dark"]) .nav-header {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 450px;
+    min-height: 520px;
     width: 100%;
 }
 
@@ -815,6 +815,14 @@ html:not([data-theme="dark"]) .nav-header {
     max-width: 720px;
     margin: 0 auto 2.2rem;
     text-align: left;
+}
+
+#skills .section-header {
+    margin-bottom: 1.25rem;
+}
+
+#skills .section-title {
+    text-align: center;
 }
 
 .section-eyebrow {

@@ -26,6 +26,11 @@ const contentData = {
             techStack: "Tech Stack",
             results: "Resultados"
         },
+        skillsMeta: {
+            eyebrow: "Habilidades",
+            title: "Stack e competências principais",
+            lead: "Tecnologias, ferramentas e práticas utilizadas no desenvolvimento de APIs, microsserviços e soluções backend e frontend."
+        },
         highlightsMeta: {
             eyebrow: "Diferenciais",
             title: "Destaques que geram impacto",
@@ -121,6 +126,11 @@ const contentData = {
         labels: {
             techStack: "Tech Stack",
             results: "Results"
+        },
+        skillsMeta: {
+            eyebrow: "Skills",
+            title: "Core stack and capabilities",
+            lead: "Technologies, tools, and practices used in the development of APIs, microservices, and backend and frontend solutions."
         },
         highlightsMeta: {
             eyebrow: "Highlights",
@@ -416,6 +426,11 @@ function renderPage(lang) {
     document.getElementById('nav-skills').textContent = data.nav.skills;
     document.getElementById('nav-experience').textContent = data.nav.experience;
     document.getElementById('nav-highlights').textContent = data.nav.highlights;
+    if (data.skillsMeta) {
+        document.getElementById('skills-eyebrow').textContent = data.skillsMeta.eyebrow;
+        document.getElementById('skills-title').textContent = data.skillsMeta.title;
+        document.getElementById('skills-lead').textContent = data.skillsMeta.lead;
+    }
 
     if (data.highlightsMeta) {
         document.getElementById('highlights-eyebrow').textContent = data.highlightsMeta.eyebrow;
@@ -558,7 +573,7 @@ function applyTheme(theme) {
 function applyLanguage(lang) {
     localStorage.setItem('lang', lang);
     updateLangLabel(lang);
-    const savedTheme = localStorage.getItem('theme') || 'light';
+    const savedTheme = localStorage.getItem('theme') || 'dark';
     updateThemeLabel(savedTheme);
     renderPage(lang);
     if (langDropdown) langDropdown.removeAttribute('open');
@@ -648,7 +663,7 @@ document.addEventListener('keydown', (e) => {
 // Initialize
 window.onload = () => {
     const savedLang = localStorage.getItem('lang') || 'pt-BR';
-    const savedTheme = localStorage.getItem('theme') || 'light';
+    const savedTheme = localStorage.getItem('theme') || 'dark';
     applyTheme(savedTheme);
     updateLangLabel(savedLang);
     renderPage(savedLang);
