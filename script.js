@@ -52,11 +52,12 @@ const contentData = {
             }
         ],
         skills: [
-            { category: "Backend", items: ["Golang", "Java 8+", "Microservices", "Spring (Boot, Data, Security)", "JWT", "ORM (GORM & Hibernate)", "Gin Gonic", "Groovy/Grails", "JSF", "Swagger / OpenAPI", "REST APIs", "Desenvolvimento de Shared Libraries", "Arquitetura Hexagonal / Clean Architecture"] },
-            { category: "Banco de Dados e Mensageria", items: ["PostgreSQL", "MySQL", "SQL Server", "Redis", "RabbitMQ", "Event-Driven Architecture", "Elasticsearch"] },
-            { category: "DevOps e Cloud", items: ["Docker", "Docker Compose Multi-Service", "AWS (S3, IAM, EC2)", "Linux", "Git"] },
-            { category: "Conceitos e Práticas", items: ["Clean Code", "SOLID", "Domínio Fortemente Tipado (Strongly Typed Domain)", "Testes Unitários e de Integração (TDD, Table-Driven Tests)", "Scrum", "Kanban", "Modelagem de Dados", "Tuning de Performance", "Padrão JSEND"] },
-            { category: "Frontend", items: ["Vue.js", "Angular 2+", "TypeScript", "JavaScript", "Material Design", "Bootstrap", "PrimeFaces"] },
+            { category: "Backend", items: ["Golang", "Gin Gonic", "Java 8+", "Spring (Boot, Data, Security)", "ORM (GORM & Hibernate)", "Groovy/Grails", "JWT", "Swagger / OpenAPI", "JSF", "REST APIs", "Microserviços", "Desenvolvimento de Bibliotecas Compartilhadas", "OAuth2 (Google OAuth2)", "Arquitetura Hexagonal / Clean Architecture"] },
+            { category: "Banco de Dados e Mensageria", items: ["PostgreSQL", "MySQL", "SQL Server", "Redis", "RabbitMQ", "AWS SQS", "Arquitetura Baseada em Eventos", "Elasticsearch"] },
+            { category: "DevOps e Cloud", items: ["Docker", "Docker Compose Multi-Service", "AWS (IAM, S3, EC2, SQS)", "Linux", "Git"] },
+            { category: "Conceitos e Práticas", items: ["Clean Code", "SOLID", "Domínio Fortemente Tipado (Strongly Typed Domain)", "Testes Unitários e de Integração (TDD, Table-Driven Tests)", "Circuit Breaker", "Graceful Shutdown", "Outbox Pattern", "Rate Limiting", "Scrum", "Kanban", "Modelagem de Dados", "Tuning de Performance"] },
+            { category: "Frontend", items: ["Vue.js", "Angular 2+", "React", "TypeScript", "JavaScript", "PrimeFaces", "Bootstrap", "Material Design"] },
+            { category: "Idiomas", items: ["Português (Nativo)", "Inglês (Básico/A2 - Em desenvolvimento)"] },
         ],
         jobs: [
             {
@@ -153,11 +154,12 @@ const contentData = {
             }
         ],
         skills: [
-            { category: "Backend", items: ["Golang", "Java 8+", "Microservices", "Spring (Boot, Data, Security)", "JWT", "ORM (GORM & Hibernate)", "Gin Gonic", "Groovy/Grails", "JSF", "Swagger / OpenAPI", "REST APIs", "Shared Libraries Development", "Hexagonal / Clean Architecture"] },
-            { category: "Databases & Messaging", items: ["PostgreSQL", "MySQL", "SQL Server", "Redis", "RabbitMQ", "Event-Driven Architecture", "Elasticsearch"] },
-            { category: "DevOps & Cloud", items: ["Docker", "Docker Compose Multi-Service", "AWS (S3, IAM, EC2)", "Linux", "Git"] },
-            { category: "Core Competencies", items: ["Clean Code", "SOLID", "Strongly Typed Domain", "TDD & Unit Testing (Table-Driven)", "Scrum", "Kanban", "Data Modeling", "Performance Tuning", "JSEND Pattern"] },
-            { category: "Frontend", items: ["Vue.js", "Angular 2+", "TypeScript", "JavaScript", "Material Design", "Bootstrap", "PrimeFaces"] },
+            { category: "Backend", items: ["Golang", "Gin Gonic", "Java 8+", "Spring (Boot, Data, Security)", "ORM (GORM & Hibernate)", "Groovy/Grails", "JWT", "Swagger / OpenAPI", "JSF", "REST APIs", "Microservices", "Shared Libraries Development", "OAuth2 (Google OAuth2)", "Hexagonal / Clean Architecture"] },
+            { category: "Databases & Messaging", items: ["PostgreSQL", "MySQL", "SQL Server", "Redis", "RabbitMQ", "AWS SQS", "Event-Driven Architecture", "Elasticsearch"] },
+            { category: "DevOps & Cloud", items: ["Docker", "Docker Compose Multi-Service", "AWS (IAM, S3, EC2, SQS)", "Linux", "Git"] },
+            { category: "Core Competencies", items: ["Clean Code", "SOLID", "Strongly Typed Domain", "TDD & Unit Testing (Table-Driven)", "Circuit Breaker", "Graceful Shutdown", "Outbox Pattern", "Rate Limiting", "Scrum", "Kanban", "Data Modeling", "Performance Tuning"] },
+            { category: "Frontend", items: ["Vue.js", "Angular 2+", "React", "TypeScript", "JavaScript", "PrimeFaces", "Bootstrap", "Material Design"] },
+            { category: "Languages", items: ["Portuguese (Native)", "English (Elementary/A2 - Currently studying)"] },
         ],
         jobs: [
             {
@@ -191,7 +193,7 @@ const contentData = {
                 company: "Velti Tecnologia",
                 stack: "Java, Spring, JSF, Angular, MySQL.",
                 details: [
-                    "<strong>Development & Modernization:</strong> Full Stack role on the \"Velti Ponto\" system. Responsible for maintaining and implementing new features in legacy code using <strong>Java</strong> e <strong>JSF</strong> and participated in the initial migration phase to <strong>Angular</strong>."
+                    "<strong>Development & Modernization:</strong> Full Stack role on the \"Velti Ponto\" system. Responsible for maintaining and implementing new features in legacy code using <strong>Java</strong> and <strong>JSF</strong> and participated in the initial migration phase to <strong>Angular</strong>."
                 ]
             },
             {
@@ -416,8 +418,8 @@ function renderPage(lang) {
                 <span>CV</span>
             </summary>
             <div class="cv-menu">
-                <a class="cv-link" href="assets/felipedenardocv_pt-BR.pdf" download="felipedenardocv_pt-BR.pdf">PT-BR</a>
-                <a class="cv-link" href="assets/felipedenardocv_en-US.pdf" download="felipedenardocv_en-US.pdf">EN-US</a>
+                <a class="cv-link" href="assets/felipedenardocv_pt-BR.pdf" target="_blank" rel="noopener noreferrer" download="felipedenardocv_pt-BR.pdf">PT-BR</a>
+                <a class="cv-link" href="assets/felipedenardocv_en-US.pdf" target="_blank" rel="noopener noreferrer" download="felipedenardocv_en-US.pdf">EN-US</a>
             </div>
         </details>`;
 
