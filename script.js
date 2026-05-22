@@ -52,10 +52,12 @@ const contentData = {
             }
         ],
         skills: [
-            { category: "Backend", items: ["Golang", "Gin Gonic", "Java 8+", "Spring (Boot, Data, Security)", "ORM (GORM & Hibernate)", "Groovy/Grails", "JWT", "Swagger / OpenAPI", "JSF", "REST APIs", "Microserviços", "Desenvolvimento de Bibliotecas Compartilhadas", "OAuth2 (Google OAuth2)", "Arquitetura Hexagonal / Clean Architecture"] },
+            { category: "Backend", items: ["Golang", "Gin Gonic", "Java 8+", "Spring (Boot, Data, Security)", "ORM (GORM & Hibernate)", "Groovy/Grails", "JSF"] },
+            { category: "APIs e Arquitetura", items: ["JWT", "OAuth2", "Swagger/OpenAPI", "REST APIs", "Microserviços", "Desenvolvimento de Bibliotecas Compartilhadas", "Arquitetura Hexagonal/Clean Architecture"] },
             { category: "Banco de Dados e Mensageria", items: ["PostgreSQL", "MySQL", "SQL Server", "Redis", "RabbitMQ", "AWS SQS", "Arquitetura Baseada em Eventos", "Elasticsearch"] },
-            { category: "DevOps e Cloud", items: ["Docker", "Docker Compose Multi-Service", "AWS (IAM, S3, EC2, SQS)", "Linux", "Git"] },
-            { category: "Conceitos e Práticas", items: ["Clean Code", "SOLID", "Domínio Fortemente Tipado (Strongly Typed Domain)", "Testes Unitários e de Integração (TDD, Table-Driven Tests)", "Circuit Breaker", "Graceful Shutdown", "Outbox Pattern", "Rate Limiting", "Scrum", "Kanban", "Modelagem de Dados", "Tuning de Performance"] },
+            { category: "DevOps e Cloud", items: ["Docker", "Docker Compose Multi-serviços", "AWS (IAM, S3, EC2, SQS)", "Linux", "Git"] },
+            { category: "Resiliência e Operação", items: ["Circuit Breaker", "Graceful Shutdown", "Outbox Pattern", "Rate Limiting"] },
+            { category: "Conceitos e Práticas", items: ["Clean Code", "SOLID", "Domínio Fortemente Tipado", "Testes Unitários e de Integração (TDD, Table-Driven Tests)", "Modelagem de Dados", "Tuning de Performance"] },
             { category: "Frontend", items: ["Vue.js", "Angular 2+", "React", "TypeScript", "JavaScript", "PrimeFaces", "Bootstrap", "Material Design"] },
             { category: "Idiomas", items: ["Português (Nativo)", "Inglês (Básico/A2 - Em desenvolvimento)"] },
         ],
@@ -154,10 +156,12 @@ const contentData = {
             }
         ],
         skills: [
-            { category: "Backend", items: ["Golang", "Gin Gonic", "Java 8+", "Spring (Boot, Data, Security)", "ORM (GORM & Hibernate)", "Groovy/Grails", "JWT", "Swagger / OpenAPI", "JSF", "REST APIs", "Microservices", "Shared Libraries Development", "OAuth2 (Google OAuth2)", "Hexagonal / Clean Architecture"] },
+            { category: "Backend", items: ["Golang", "Gin Gonic", "Java 8+", "Spring (Boot, Data, Security)", "ORM (GORM & Hibernate)", "Groovy/Grails", "JSF"] },
+            { category: "APIs & Architecture", items: ["JWT", "OAuth2", "Swagger/OpenAPI", "REST APIs", "Microservices", "Shared Libraries Development", "Hexagonal/Clean Architecture"] },
             { category: "Databases & Messaging", items: ["PostgreSQL", "MySQL", "SQL Server", "Redis", "RabbitMQ", "AWS SQS", "Event-Driven Architecture", "Elasticsearch"] },
             { category: "DevOps & Cloud", items: ["Docker", "Docker Compose Multi-Service", "AWS (IAM, S3, EC2, SQS)", "Linux", "Git"] },
-            { category: "Core Competencies", items: ["Clean Code", "SOLID", "Strongly Typed Domain", "TDD & Unit Testing (Table-Driven)", "Circuit Breaker", "Graceful Shutdown", "Outbox Pattern", "Rate Limiting", "Scrum", "Kanban", "Data Modeling", "Performance Tuning"] },
+            { category: "Resilience & Operations", items: ["Circuit Breaker", "Graceful Shutdown", "Outbox Pattern", "Rate Limiting"] },
+            { category: "Core Competencies", items: ["Clean Code", "SOLID", "Strongly Typed Domain", "Unit and Integration Testing (TDD, Table-Driven Tests)", "Data Modeling", "Performance Tuning"] },
             { category: "Frontend", items: ["Vue.js", "Angular 2+", "React", "TypeScript", "JavaScript", "PrimeFaces", "Bootstrap", "Material Design"] },
             { category: "Languages", items: ["Portuguese (Native)", "English (Elementary/A2 - Currently studying)"] },
         ],
