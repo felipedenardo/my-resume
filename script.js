@@ -1,8 +1,8 @@
 const profileData = {
     name: "Felipe Gonçalves Denardo",
     role: {
-        "pt-BR": "Senior Backend Engineer | Golang & Java | Microservices | APIs",
-        "en-US": "Senior Backend Engineer | Golang & Java | Microservices | APIs"
+        "pt-BR": "Senior Backend Engineer | Golang & Java | Distributed Systems | Microservices",
+        "en-US": "Senior Backend Engineer | Golang & Java | Distributed Systems | Microservices"
     },
     photoUrl: "assets/profile.jpeg",
     contacts: [
@@ -20,11 +20,13 @@ const contentData = {
             skills: "Habilidades",
             experience: "Experiência",
             highlights: "Diferenciais",
+            certificates: "Formação",
             education: "Educação"
         },
         labels: {
             techStack: "Tech Stack",
-            results: "Resultados"
+            results: "Resultados",
+            viewCertificate: "Ver certificado"
         },
         skillsMeta: {
             eyebrow: "Habilidades",
@@ -36,14 +38,19 @@ const contentData = {
             title: "Destaques que geram impacto",
             lead: "Resultados mensuráveis, decisões técnicas sólidas e foco em eficiência."
         },
-        summary: "<b>Senior Backend Engineer</b> com mais de 8 anos de experiência na construção de sistemas distribuídos e arquitetura de microsserviços. Especialista em <b>Golang</b> e <b>Java</b>, com foco em soluções de alta disponibilidade e resiliência. Ampla experiência na aplicação de <b>Clean Architecture</b>, priorizando o desacoplamento da lógica de negócio e a independência de infraestrutura para garantir sistemas testáveis e de fácil manutenção. Experiência complementar em <b>frontend</b>, assegurando a entrega de integrações eficientes de ponta a ponta.",
+        certificatesMeta: {
+            eyebrow: "Formação Complementar",
+            title: "Aprendizado contínuo",
+            lead: "Cursos, formação acadêmica e idiomas que sustentam minha atuação técnica."
+        },
+        summary: "<b>Senior Backend Engineer</b> com 9 anos de experiência no desenvolvimento de sistemas distribuídos e arquiteturas de microsserviços. Forte experiência em <b>Golang</b> e experiência profissional com <b>Java</b>, com foco na construção de sistemas escaláveis, resilientes e de alta disponibilidade. Experiência na aplicação de princípios de <b>Clean Architecture</b>, priorizando o desacoplamento da lógica de negócio e a independência da infraestrutura para desenvolver sistemas testáveis, sustentáveis e de fácil manutenção. Experiência complementar em desenvolvimento <b>frontend</b>, possibilitando integrações eficientes de ponta a ponta.",
         highlights: [
             {
                 title: "Performance e Otimização",
-                description: "Histórico comprovado na resolução de gargalos críticos, alcançando <strong>reduções de até 80% no tempo de resposta de APIs</strong>. Aplicação de <strong>tuning de queries</strong>, implementação estratégica de cache com <strong>Redis</strong> e <strong>otimização de payloads via DTOs</strong>, garantindo alta eficiência no tráfego de dados."
+                description: "Histórico comprovado na resolução de gargalos críticos, alcançando <strong>reduções de até 80% no tempo de resposta de APIs</strong>. Aplicação de <strong>tuning de queries</strong>, implementação estratégica de cache com <strong>Redis</strong> e <strong>otimização de payloads</strong>, garantindo alta eficiência no tráfego de dados."
             },
             {
-                title: "Arquitetura de Eventos",
+                title: "Mensageria / Arquitetura de Eventos",
                 description: "Implementação de mensageria com <strong>RabbitMQ</strong> para processamento assíncrono e desacoplamento de serviços, reduzindo tempos de batch em <strong>~96%</strong>."
             },
             {
@@ -54,25 +61,53 @@ const contentData = {
         skills: [
             { category: "Backend", items: ["Golang", "Gin Gonic", "Java 8+", "Spring (Boot, Data, Security)", "ORM (GORM & Hibernate)", "Groovy/Grails", "JSF"] },
             { category: "APIs e Arquitetura", items: ["JWT", "OAuth2", "Swagger/OpenAPI", "REST APIs", "Microserviços", "Desenvolvimento de Bibliotecas Compartilhadas", "Arquitetura Hexagonal/Clean Architecture"] },
-            { category: "Banco de Dados e Mensageria", items: ["PostgreSQL", "MySQL", "SQL Server", "Redis", "RabbitMQ", "AWS SQS", "Arquitetura Baseada em Eventos", "Elasticsearch"] },
-            { category: "DevOps e Cloud", items: ["Docker", "Docker Compose Multi-serviços", "AWS (IAM, S3, EC2, SQS)", "Linux", "Git"] },
-            { category: "Resiliência e Operação", items: ["Circuit Breaker", "Graceful Shutdown", "Outbox Pattern", "Rate Limiting"] },
+            { category: "Banco de Dados e Mensageria", items: ["PostgreSQL", "MySQL", "SQL Server", "Redis", "RabbitMQ", "AWS SQS", "Arquitetura Orientada a Eventos", "Elasticsearch"] },
+            { category: "DevOps e Cloud", items: ["Docker", "Jenkins", "Kubernetes", "AWS (IAM, S3, EC2, SQS)", "Linux", "Git"] },
             { category: "Observabilidade", items: ["Grafana (Análise de Logs e Troubleshooting)"] },
-            { category: "Conceitos e Práticas", items: ["Clean Code", "SOLID", "Domínio Fortemente Tipado", "Testes Unitários e de Integração (TDD, Table-Driven Tests)", "Modelagem de Dados", "Tuning de Performance"] },
+            { category: "Resiliência e Operação", items: ["Circuit Breaker", "Graceful Shutdown", "Outbox Pattern", "Rate Limiting"] },
+            { category: "Conceitos e Práticas", items: ["Clean Code", "SOLID", "Domínio Fortemente Tipado", "Testes Unitários", "Modelagem de Dados", "Tuning de Performance"] },
             { category: "Frontend", items: ["Vue.js", "Angular 2+", "React", "TypeScript", "JavaScript", "PrimeFaces", "Bootstrap", "Material Design"] },
             { category: "Idiomas", items: ["Português (Nativo)", "Inglês (Básico/A2 - Em desenvolvimento)"] },
+        ],
+        certificates: [
+            {
+                category: "Formação Acadêmica",
+                icon: "cap",
+                items: [
+                    { title: "Sistemas de Informação", issuer: "Unibrasil", date: "Concluído no 2º semestre letivo de 2018", url: "https://amzn-s3-personal-docs-bucket.s3.us-east-1.amazonaws.com/certificates/unibrasil/Declara%C3%A7%C3%A3o%20de%20Conclus%C3%A3o%20de%20Curso%20FELIPE%20GON%C3%87ALVES%20DENARDO.pdf" }
+                ]
+            },
+            {
+                category: "Desenvolvimento Técnico",
+                icon: "code",
+                items: [
+                    { title: "Curso de Go (Golang)", issuer: "Udemy", tags: ["Backend"], url: "https://amzn-s3-personal-docs-bucket.s3.us-east-1.amazonaws.com/certificates/udemy/go.pdf" },
+                    { title: "Unit Testing for Go Developers", issuer: "Udemy", tags: ["Backend", "Testes"], url: "https://amzn-s3-personal-docs-bucket.s3.us-east-1.amazonaws.com/certificates/udemy/go-unit-test.pdf" },
+                    { title: "Docker: Ferramenta Essencial para Desenvolvedores", issuer: "Udemy", tags: ["DevOps"], url: "https://amzn-s3-personal-docs-bucket.s3.us-east-1.amazonaws.com/certificates/udemy/docker.pdf" },
+                    { title: "AWS para Iniciantes - Aprenda e Domine a Nuvem Amazon", issuer: "Udemy", tags: ["Cloud"], url: "https://amzn-s3-personal-docs-bucket.s3.us-east-1.amazonaws.com/certificates/udemy/aws-beginer.pdf" },
+                    { title: "Formação Angular 2, 4 e 6", issuer: "Udemy", tags: ["Frontend"], url: "https://amzn-s3-personal-docs-bucket.s3.us-east-1.amazonaws.com/certificates/udemy/angular2%2B.pdf" }
+                ]
+            },
+            {
+                category: "Idiomas",
+                icon: "globe",
+                items: [
+                    { title: "Level 1", issuer: "Open English", flag: "🇺🇸", tags: ["A1"], url: "https://amzn-s3-personal-docs-bucket.s3.us-east-1.amazonaws.com/certificates/open-english/certificate_level1.pdf" },
+                    { title: "Level 2", issuer: "Open English", flag: "🇺🇸", tags: ["A1"], url: "https://amzn-s3-personal-docs-bucket.s3.us-east-1.amazonaws.com/certificates/open-english/certificate_level2.pdf" }
+                ]
+            }
         ],
         jobs: [
             {
                 role: "Senior Backend Engineer",
                 period: "Fev/2020 - Atual",
                 company: "CWS Platform",
-                stack: "Golang (GORM), Groovy/Grails, MySQL, PostgreSQL, Redis, RabbitMQ, Elasticsearch, Docker, AWS S3, Vue.js, React.",
-                results: ["-80% latência de APIs", "~96% redução em batch", "+resiliência em importações"],
+                stack: "Golang (GORM), Groovy/Grails, PostgreSQL, MySQL, Redis, RabbitMQ, Docker, Jenkins, Kubernetes, Elasticsearch, AWS S3, Grafana, Vue.js, React.",
+                results: ["-80% latência de APIs", "~96% redução em batch"],
                 details: [
-                    "<strong>Arquitetura e Design:</strong> Liderança técnica no desenvolvimento de microsserviços em <strong>Golang</strong> sob <strong>Clean Architecture</strong>, estabelecendo padrões de <strong>Testes Unitários (Table-Driven)</strong> e de <strong>Integração</strong>. O foco na testabilidade do domínio resultou em um sistema altamente desacoplado e resiliente a falhas.",
+                    "<strong>Arquitetura e Design:</strong> Liderança técnica no desenvolvimento de microsserviços em <strong>Golang</strong> utilizando princípios de <strong>Clean Architecture</strong>, com foco em desacoplamento, manutenibilidade e testabilidade.",
                     "<strong>Otimização de Performance:</strong> Redução de <strong>80% na latência de APIs</strong> através da refatoração de lógicas, otimização de consultas <strong>MySQL</strong> (índices e planos de execução) e implementação de cache estratégico com <strong>Redis</strong>.",
-                    "<strong>Sistemas de Alta Disponibilidade:</strong> Implementação de pipeline assíncrono em duas fases (light/heavy) para importação de planilhas SKU com <strong>RabbitMQ</strong> e staging, reduzindo o tempo de processamento em ~96% (50s para 2s) e eliminando timeouts/locks no banco de dados.",
+                    "<strong>Processamento Assíncrono e Otimização:</strong> Entre os projetos de destaque, atuei no desenvolvimento e otimização de um pipeline assíncrono para importação de planilhas de SKUs, utilizando <strong>RabbitMQ</strong>, streaming e processamento em batches. Otimizei o parser XLSX com armazenamento temporário da Shared String Table (SST) em <strong>SQLite</strong>, mantendo o uso de memória constante, além de contribuir para o processamento incremental de grandes volumes de dados por meio de staging tables no <strong>MySQL</strong> e estratégias de retry para contenção de locks. A solução reduziu o tempo de processamento em aproximadamente 96% (de 50s para 2s), eliminando problemas de OOM (Out of Memory) nos pods do <strong>Kubernetes</strong>, além de timeouts e locks no banco de dados.",
                     "<strong>Busca e Dados (Elasticsearch):</strong> Otimização de queries e estratégias de reindexação no <strong>Elasticsearch</strong>, melhorando significativamente a relevância e performance da busca.",
                     "<strong>Modernização e Liderança:</strong> Redução de débito técnico em sistemas legados e mentoria técnica ao time através de <strong>Code Reviews</strong> rigorosos, elevando a régua de qualidade da engenharia.",
                     "<strong>Integração Full Stack:</strong> Desenvolvimento de interfaces dinâmicas em <strong>Vue.js</strong> e <strong>React</strong>, garantindo integração fluida com APIs em <strong>Go</strong> e <strong>Groovy</strong>."
@@ -125,11 +160,13 @@ const contentData = {
             skills: "Skills",
             experience: "Experience",
             highlights: "Highlights",
+            certificates: "Learning",
             education: "Education"
         },
         labels: {
             techStack: "Tech Stack",
-            results: "Results"
+            results: "Results",
+            viewCertificate: "View certificate"
         },
         skillsMeta: {
             eyebrow: "Skills",
@@ -141,14 +178,19 @@ const contentData = {
             title: "Impact Highlights",
             lead: "Measurable outcomes, sound technical decisions, and relentless focus on efficiency."
         },
-        summary: "<b>Senior Backend Engineer</b> with over 8 years of experience building distributed systems and microservices architecture. Expert in <b>Golang</b> and <b>Java</b>, focusing on high availability and resilience solutions. Extensive experience applying <b>Clean Architecture</b>, prioritizing decoupling of business logic and infrastructure independence to ensure testable and maintainable systems. Complementary <b>frontend</b> experience, ensuring the delivery of efficient end-to-end integrations.",
+        certificatesMeta: {
+            eyebrow: "Further Education",
+            title: "Continuous learning",
+            lead: "Courses, academic background, and language learning that support my technical work."
+        },
+        summary: "<b>Senior Backend Engineer</b> with 9 years of experience building distributed systems and microservices architectures. Strong expertise in <b>Golang</b> and professional experience with <b>Java</b>, with a focus on building scalable, resilient, and highly available systems. Experienced in applying <b>Clean Architecture</b> principles, prioritizing the decoupling of business logic from infrastructure to build testable, maintainable, and evolvable systems. Complementary experience in <b>frontend</b> development, enabling effective end-to-end integrations.",
         highlights: [
             {
                 title: "Performance & Optimization",
-                description: "Proven track record in resolving critical bottlenecks, achieving <strong>up to 80% reduction in API response times</strong>. Applying <strong>query tuning</strong>, strategic <strong>Redis</strong> caching, and <strong>payload optimization and data integrity via DTOs</strong>, ensuring high-throughput data efficiency."
+                description: "Proven track record of resolving critical bottlenecks, achieving <strong>up to 80% reduction in API response times</strong>. Applying in <strong>query tuning</strong>, strategic <strong>Redis</strong> caching and <strong>payload optimization</strong>, ensuring high-throughput data efficiency."
             },
             {
-                title: "Event-Driven Architecture",
+                title: "Messaging / Event-Driven Architecture",
                 description: "Specialized in implementing asynchronous messaging with <strong>RabbitMQ</strong> to decouple services, resulting in a <strong>~96%</strong> reduction in batch processing times and significantly improved system scalability."
             },
             {
@@ -160,24 +202,52 @@ const contentData = {
             { category: "Backend", items: ["Golang", "Gin Gonic", "Java 8+", "Spring (Boot, Data, Security)", "ORM (GORM & Hibernate)", "Groovy/Grails", "JSF"] },
             { category: "APIs & Architecture", items: ["JWT", "OAuth2", "Swagger/OpenAPI", "REST APIs", "Microservices", "Shared Libraries Development", "Hexagonal/Clean Architecture"] },
             { category: "Databases & Messaging", items: ["PostgreSQL", "MySQL", "SQL Server", "Redis", "RabbitMQ", "AWS SQS", "Event-Driven Architecture", "Elasticsearch"] },
-            { category: "DevOps & Cloud", items: ["Docker", "Docker Compose Multi-Service", "AWS (IAM, S3, EC2, SQS)", "Linux", "Git"] },
-            { category: "Resilience & Operations", items: ["Circuit Breaker", "Graceful Shutdown", "Outbox Pattern", "Rate Limiting"] },
+            { category: "DevOps & Cloud", items: ["Docker", "Jenkins", "Kubernetes", "AWS (IAM, S3, EC2, SQS)", "Linux", "Git"] },
             { category: "Observability", items: ["Grafana (Log Analysis and Troubleshooting)"] },
-            { category: "Core Competencies", items: ["Clean Code", "SOLID", "Strongly Typed Domain", "Unit and Integration Testing (TDD, Table-Driven Tests)", "Data Modeling", "Performance Tuning"] },
+            { category: "Resilience & Operations", items: ["Circuit Breaker", "Graceful Shutdown", "Outbox Pattern", "Rate Limiting"] },
+            { category: "Core Competencies", items: ["Clean Code", "SOLID", "Strongly Typed Domain Modeling", "Unit Testing", "Data Modeling", "Performance Tuning"] },
             { category: "Frontend", items: ["Vue.js", "Angular 2+", "React", "TypeScript", "JavaScript", "PrimeFaces", "Bootstrap", "Material Design"] },
-            { category: "Languages", items: ["Portuguese (Native)", "English (Elementary/A2 - Currently studying)"] },
+            { category: "Languages", items: ["Portuguese (Native)", "English (Elementary/A2 - Currently improving)"] },
+        ],
+        certificates: [
+            {
+                category: "Academic Education",
+                icon: "cap",
+                items: [
+                    { title: "Information Systems", issuer: "Unibrasil", date: "Completed in the 2nd academic semester of 2018", url: "https://amzn-s3-personal-docs-bucket.s3.us-east-1.amazonaws.com/certificates/unibrasil/Declara%C3%A7%C3%A3o%20de%20Conclus%C3%A3o%20de%20Curso%20FELIPE%20GON%C3%87ALVES%20DENARDO.pdf" }
+                ]
+            },
+            {
+                category: "Technical Development",
+                icon: "code",
+                items: [
+                    { title: "Go (Golang) Course", issuer: "Udemy", tags: ["Backend"], url: "https://amzn-s3-personal-docs-bucket.s3.us-east-1.amazonaws.com/certificates/udemy/go.pdf" },
+                    { title: "Unit Testing for Go Developers", issuer: "Udemy", tags: ["Backend", "Testing"], url: "https://amzn-s3-personal-docs-bucket.s3.us-east-1.amazonaws.com/certificates/udemy/go-unit-test.pdf" },
+                    { title: "Docker: Essential Tool for Developers", issuer: "Udemy", tags: ["DevOps"], url: "https://amzn-s3-personal-docs-bucket.s3.us-east-1.amazonaws.com/certificates/udemy/docker.pdf" },
+                    { title: "AWS for Beginners - Learn and Master the Amazon Cloud", issuer: "Udemy", tags: ["Cloud"], url: "https://amzn-s3-personal-docs-bucket.s3.us-east-1.amazonaws.com/certificates/udemy/aws-beginer.pdf" },
+                    { title: "Angular 2, 4, and 6 Training", issuer: "Udemy", tags: ["Frontend"], url: "https://amzn-s3-personal-docs-bucket.s3.us-east-1.amazonaws.com/certificates/udemy/angular2%2B.pdf" }
+                ]
+            },
+            {
+                category: "Languages",
+                icon: "globe",
+                items: [
+                    { title: "Level 1", issuer: "Open English", flag: "🇺🇸", tags: ["A1"], url: "https://amzn-s3-personal-docs-bucket.s3.us-east-1.amazonaws.com/certificates/open-english/certificate_level1.pdf" },
+                    { title: "Level 2", issuer: "Open English", flag: "🇺🇸", tags: ["A1"], url: "https://amzn-s3-personal-docs-bucket.s3.us-east-1.amazonaws.com/certificates/open-english/certificate_level2.pdf" }
+                ]
+            }
         ],
         jobs: [
             {
                 role: "Senior Backend Engineer",
                 period: "Feb/2020 - Present",
                 company: "CWS Platform",
-                stack: "Golang (GORM), Groovy/Grails, MySQL, PostgreSQL, Redis, RabbitMQ, Elasticsearch, Docker, AWS S3, Vue.js, React.",
-                results: ["-80% API latency", "~96% batch reduction", "Higher import resilience"],
+                stack: "Golang (GORM), Groovy/Grails, PostgreSQL, MySQL, Redis, RabbitMQ, Docker, Jenkins, Kubernetes, Elasticsearch, AWS S3, Grafana, Vue.js, React.",
+                results: ["-80% API latency", "~96% batch reduction"],
                 details: [
-                    "<strong>Architecture & Design:</strong> Technical lead in <strong>Golang</strong> microservices development, applying <strong>Clean Architecture</strong> to decouple business logic from infrastructure. Established high-quality standards through <strong>Table-Driven Unit Testing</strong> and <strong>Integration Tests</strong>, ensuring a resilient and highly maintainable ecosystem.",
+                    "<strong>Architecture & Design:</strong> Technical leadership in the development of <strong>Golang</strong> microservices using <strong>Clean Architecture</strong> principles, with a focus on decoupling, maintainability, and testability.",
                     "<strong>Performance Optimization:</strong> Achieved an <strong>80% reduction in API latency</strong> by refactoring inefficient logic, optimizing <strong>MySQL</strong> queries (index analysis and execution plans), and implementing strategic caching with <strong>Redis</strong>.",
-                    "<strong>High-Availability Systems:</strong> Engineered a two-phase (light/heavy) asynchronous pipeline for SKU spreadsheet imports using <strong>RabbitMQ</strong> and staging areas, slashing effective processing time by ~96% (from ~50s to 2s) and eliminating database timeouts/locks.",
+                    "<strong>Asynchronous Processing & Optimization:</strong> Among my key projects, I contributed to the development and optimization of an asynchronous pipeline for SKU spreadsheet imports, using <strong>RabbitMQ</strong>, streaming, and batch processing. I optimized the XLSX parser by temporarily storing the Shared String Table (SST) in <strong>SQLite</strong>, maintaining constant memory usage, and contributed to the incremental processing of large data volumes through <strong>MySQL</strong> staging tables and lock contention retry strategies. The solution reduced processing time by approximately 96% (from 50s to 2s), eliminating OOM (Out of Memory) issues in <strong>Kubernetes</strong> pods, as well as database timeouts and locks.",
                     "<strong>Search & Data (Elasticsearch):</strong> Optimized search queries and reindexing strategies in <strong>Elasticsearch</strong>, significantly improving both search relevance and system throughput.",
                     "<strong>Modernization & Leadership:</strong> Reduced technical debt in legacy systems and raised the engineering bar through technical mentorship and rigorous <strong>Code Reviews</strong>, fostering a culture of high-quality code.",
                     "<strong>Full-Stack Integration:</strong> Developed dynamic interfaces using <strong>Vue.js</strong> and <strong>React</strong>, ensuring seamless integration between frontend applications and <strong>Go</strong>/<strong>Groovy</strong> APIs."
@@ -231,7 +301,26 @@ const icons = {
     mail: '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>',
     linkedin: '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.328-4 0v5.604h-3v-11h3v1.765c1.397-2.714 7-2.825 7 2.456v6.779z"/></svg>',
     github: '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.372 0 0 5.372 0 12c0 5.303 3.438 9.8 8.207 11.387.6.11.82-.26.82-.577v-2.003c-3.336.726-4.043-1.608-4.043-1.608-.546-1.385-1.332-1.755-1.332-1.755-1.09-.747.082-.73.082-.73 1.205.085 1.838 1.238 1.838 1.238 1.07 1.835 2.809 1.305 3.491.996.108-.775.419-1.305.762-1.605-2.665-.3-5.466-1.334-5.466-5.93 0-1.31.467-2.38 1.238-3.224-.124-.3-.536-1.523.118-3.18 0 0 1-.32 3.275 1.23.958-.266 1.983-.4 3.01-.405 2.275-1.55 3.275-1.23 3.275-1.23.654 1.657.242 2.88.118 3.18.77.844 1.238 1.913 1.238 3.224 0 4.609-2.805 5.626-5.475 5.923.43.37.817 1.12.817 2.257v3.313c0 .317.22.687.82.577C20.562 21.8 24 17.303 24 12c0-6.628-5.372-12-12-12z"/></svg>',
-    download: '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"></path></svg>'
+    download: '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"></path></svg>',
+    sun: '<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>',
+    moon: '<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>'
+};
+
+function tagColorClass(tag) {
+    const normalized = tag.toLowerCase();
+    if (['a1', 'a2', 'b1', 'b2', 'c1', 'c2'].includes(normalized)) return `tag-${normalized}`;
+    if (normalized.includes('back')) return 'tag-backend';
+    if (normalized.includes('front')) return 'tag-frontend';
+    if (normalized.includes('cloud')) return 'tag-cloud';
+    if (normalized.includes('devops')) return 'tag-devops';
+    if (normalized.includes('test')) return 'tag-test';
+    return '';
+}
+
+const techIcons = {
+    cap: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8.5 12 4l10 4.5-10 4.5-10-4.5z"/><path d="M6 10.7v4.3c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-4.3"/><path d="M20.5 9.2v5.3"/></svg>',
+    code: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 6 2 12 8 18"/><polyline points="16 6 22 12 16 18"/></svg>',
+    globe: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"/></svg>'
 };
 
 class Carousel {
@@ -424,8 +513,8 @@ function renderPage(lang) {
                 <span>CV</span>
             </summary>
             <div class="cv-menu">
-                <a class="cv-link" href="assets/felipedenardocv_pt-BR.pdf" target="_blank" rel="noopener noreferrer" download="felipedenardocv_pt-BR.pdf">PT-BR</a>
-                <a class="cv-link" href="assets/felipedenardocv_en-US.pdf" target="_blank" rel="noopener noreferrer" download="felipedenardocv_en-US.pdf">EN-US</a>
+                <a class="cv-link" href="https://amzn-s3-personal-docs-bucket.s3.us-east-1.amazonaws.com/cv/felipedenardocv_pt-BR.pdf" target="_blank" rel="noopener noreferrer" download="felipedenardocv_pt-BR.pdf">PT-BR</a>
+                <a class="cv-link" href="https://amzn-s3-personal-docs-bucket.s3.us-east-1.amazonaws.com/cv/felipedenardocv_en-US.pdf" target="_blank" rel="noopener noreferrer" download="felipedenardocv_en-US.pdf">EN-US</a>
             </div>
         </details>`;
 
@@ -434,6 +523,7 @@ function renderPage(lang) {
     document.getElementById('nav-skills').textContent = data.nav.skills;
     document.getElementById('nav-experience').textContent = data.nav.experience;
     document.getElementById('nav-highlights').textContent = data.nav.highlights;
+    document.getElementById('nav-certificates').textContent = data.nav.certificates;
     if (data.skillsMeta) {
         document.getElementById('skills-eyebrow').textContent = data.skillsMeta.eyebrow;
         document.getElementById('skills-title').textContent = data.skillsMeta.title;
@@ -444,6 +534,12 @@ function renderPage(lang) {
         document.getElementById('highlights-eyebrow').textContent = data.highlightsMeta.eyebrow;
         document.getElementById('highlights-title').textContent = data.highlightsMeta.title;
         document.getElementById('highlights-lead').textContent = data.highlightsMeta.lead;
+    }
+
+    if (data.certificatesMeta) {
+        document.getElementById('certificates-eyebrow').textContent = data.certificatesMeta.eyebrow;
+        document.getElementById('certificates-title').textContent = data.certificatesMeta.title;
+        document.getElementById('certificates-lead').textContent = data.certificatesMeta.lead;
     }
 
 
@@ -460,7 +556,42 @@ function renderPage(lang) {
             </div>`;
     });
 
+    // Certificates
+    const certificatesContainer = document.getElementById('certificates-container');
+    certificatesContainer.innerHTML = '';
+    (data.certificates || []).forEach((group, index) => {
+        const itemsHtml = group.items.map(item => {
+            const meta = [item.issuer, item.date].filter(Boolean).join(' • ');
+            const iconHtml = item.flag
+                ? `<span class="cert-icon cert-icon-flag" aria-hidden="true">${item.flag}</span>`
+                : item.icon
+                    ? `<span class="cert-icon cert-icon-${item.icon}">${techIcons[item.icon] || ''}</span>`
+                    : '';
+            const tagsHtml = item.tags && item.tags.length
+                ? `<div class="cert-tags">${item.tags.map(t => `<span class="cert-tag ${tagColorClass(t)}">${t}</span>`).join('')}</div>`
+                : '';
+            return `
+            <div class="certificate-entry">
+                ${iconHtml}
+                <div class="cert-body">
+                    <span class="cert-title">${item.title}</span>
+                    ${meta ? `<span class="cert-date">${meta}</span>` : ''}
+                    ${tagsHtml}
+                    <a class="cert-link" href="${item.url}" target="_blank" rel="noopener noreferrer">${data.labels?.viewCertificate || 'View certificate'}</a>
+                </div>
+            </div>`;
+        }).join('');
 
+        certificatesContainer.innerHTML += `
+            <details class="certificate-group"${index === 0 ? ' open' : ''}>
+                <summary class="certificate-summary">
+                    <span class="certificate-category-icon">${techIcons[group.icon] || ''}</span>
+                    <span class="certificate-category">${group.category}</span>
+                    <span class="certificate-count">${group.items.length}</span>
+                </summary>
+                <div class="certificate-list">${itemsHtml}</div>
+            </details>`;
+    });
 
 
     // Skills Carousel
@@ -545,34 +676,25 @@ function renderPage(lang) {
 const langDropdown = document.getElementById('lang-dropdown');
 const langCurrent = document.getElementById('lang-current');
 const langOptions = document.querySelectorAll('.lang-option');
-const themeDropdown = document.getElementById('theme-dropdown');
-const themeCurrent = document.getElementById('theme-current');
-const themeOptions = document.querySelectorAll('.theme-option');
+const themeToggle = document.getElementById('theme-toggle');
 const themeMeta = document.querySelector('meta[name="theme-color"]');
 
 function updateLangLabel(lang) {
     if (!langCurrent) return;
-    langCurrent.textContent = lang === 'en-US' ? '🇺🇸 EN' : '🇧🇷 PT';
+    langCurrent.textContent = lang === 'en-US' ? '🇺🇸' : '🇧🇷';
 }
 
-function updateThemeLabel(theme) {
-    if (!themeCurrent) return;
-    const lang = localStorage.getItem('lang') || 'pt-BR';
-    const labels = {
-        "pt-BR": { light: "Tema: Claro", dark: "Tema: Escuro" },
-        "en-US": { light: "Theme: Light", dark: "Theme: Dark" }
-    };
+function updateThemeIcon(theme) {
+    if (!themeToggle) return;
     const normalized = theme === 'dark' ? 'dark' : 'light';
-    const dict = labels[lang] || labels["en-US"];
-    themeCurrent.textContent = dict[normalized];
+    themeToggle.innerHTML = normalized === 'dark' ? icons.sun : icons.moon;
 }
 
 function applyTheme(theme) {
     const normalized = theme === 'dark' ? 'dark' : 'light';
     document.documentElement.setAttribute('data-theme', normalized);
     localStorage.setItem('theme', normalized);
-    updateThemeLabel(normalized);
-    if (themeDropdown) themeDropdown.removeAttribute('open');
+    updateThemeIcon(normalized);
     if (themeMeta) {
         themeMeta.setAttribute('content', normalized === 'dark' ? '#0b1020' : '#667eea');
     }
@@ -581,8 +703,6 @@ function applyTheme(theme) {
 function applyLanguage(lang) {
     localStorage.setItem('lang', lang);
     updateLangLabel(lang);
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    updateThemeLabel(savedTheme);
     renderPage(lang);
     if (langDropdown) langDropdown.removeAttribute('open');
 }
@@ -595,19 +715,18 @@ langOptions.forEach((option) => {
     });
 });
 
-themeOptions.forEach((option) => {
-    option.addEventListener('click', () => {
-        const theme = option.getAttribute('data-theme');
-        if (!theme) return;
-        applyTheme(theme);
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        const current = localStorage.getItem('theme') || 'dark';
+        applyTheme(current === 'dark' ? 'light' : 'dark');
     });
-});
+}
 
 document.addEventListener('click', (event) => {
     const target = event.target;
     if (!(target instanceof Node)) return;
 
-    document.querySelectorAll('.lang-dropdown, .theme-dropdown, .cv-dropdown').forEach((dropdown) => {
+    document.querySelectorAll('.lang-dropdown, .cv-dropdown').forEach((dropdown) => {
         if (!(dropdown instanceof HTMLElement)) return;
         if (!dropdown.contains(target)) {
             dropdown.removeAttribute('open');
@@ -636,7 +755,7 @@ if (navToggle && navLinksContainer) {
 
 // Active navigation link on scroll
 function updateActiveNav() {
-    const sections = ['home', 'skills', 'experience', 'highlights'];
+    const sections = ['home', 'skills', 'experience', 'highlights', 'certificates'];
     const scrollPos = window.scrollY + 100;
 
     sections.forEach(section => {

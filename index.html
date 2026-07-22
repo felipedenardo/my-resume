@@ -39,20 +39,13 @@
             <a href="#skills" class="nav-link" id="nav-skills">Skills</a>
             <a href="#experience" class="nav-link" id="nav-experience">Experience</a>
             <a href="#highlights" class="nav-link" id="nav-highlights">Diferenciais</a>
+            <a href="#certificates" class="nav-link" id="nav-certificates">Formação</a>
         </div>
         <div class="nav-controls">
-            <div class="theme-selector-nav">
-                <details id="theme-dropdown" class="theme-dropdown">
-                    <summary id="theme-current" class="theme-summary" aria-label="Selecionar tema">Theme: Dark</summary>
-                    <div class="theme-menu">
-                        <button class="theme-option" data-theme="light">Light</button>
-                        <button class="theme-option" data-theme="dark">Dark</button>
-                    </div>
-                </details>
-            </div>
+            <button id="theme-toggle" class="icon-btn" aria-label="Alternar tema"></button>
             <div class="lang-selector-nav">
                 <details id="lang-dropdown" class="lang-dropdown">
-                    <summary id="lang-current" class="lang-summary" aria-label="Selecionar idioma">🇧🇷 PT</summary>
+                    <summary id="lang-current" class="icon-btn lang-summary" aria-label="Selecionar idioma">🇧🇷</summary>
                     <div class="lang-menu">
                         <button class="lang-option" data-lang="pt-BR">🇧🇷 PT</button>
                         <button class="lang-option" data-lang="en-US">🇺🇸 EN</button>
@@ -136,6 +129,20 @@
                         <!-- Highlights injected via JS -->
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="section">
+        <div class="section-content">
+            <div class="section-header">
+                <p id="certificates-eyebrow" class="section-eyebrow"></p>
+                <h2 id="certificates-title" class="section-title"></h2>
+                <p id="certificates-lead" class="section-lead"></p>
+            </div>
+            <div id="certificates-container" class="certificates-grid">
+                <!-- Certificate groups injected via JS -->
             </div>
         </div>
     </section>
