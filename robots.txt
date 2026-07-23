@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://felipedenardo.github.io/my-resume/sitemap.xml

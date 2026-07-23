@@ -1233,12 +1233,6 @@ html:not([data-theme="dark"]) .nav-header {
         width: 100%;
     }
 
-    .lang-summary,
-    .theme-summary {
-        padding: 7px 30px 7px 10px;
-        font-size: 0.82rem;
-    }
-
     .brand-text {
         font-size: 1.35rem;
         padding: 0;
@@ -1417,12 +1411,12 @@ html:not([data-theme="dark"]) .nav-header {
         margin-bottom: 0.2rem;
     }
 
-    #highlights {
-        padding-bottom: calc(8rem + env(safe-area-inset-bottom));
-    }
-
     #highlights .highlights-content {
         padding-bottom: 1rem;
+    }
+
+    #certificates {
+        padding-bottom: calc(8rem + env(safe-area-inset-bottom));
     }
 
 }

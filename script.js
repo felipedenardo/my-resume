@@ -757,21 +757,23 @@ if (navToggle && navLinksContainer) {
 function updateActiveNav() {
     const sections = ['home', 'skills', 'experience', 'highlights', 'certificates'];
     const scrollPos = window.scrollY + 100;
+    const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
 
+    let activeSection = sections[0];
     sections.forEach(section => {
         const element = document.getElementById(section);
-        const navLink = document.getElementById(`nav-${section}`);
-
-        if (element && navLink) {
-            const offsetTop = element.offsetTop;
-            const offsetBottom = offsetTop + element.offsetHeight;
-
-            if (scrollPos >= offsetTop && scrollPos < offsetBottom) {
-                document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
-                navLink.classList.add('active');
-            }
+        if (element && scrollPos >= element.offsetTop) {
+            activeSection = section;
         }
     });
+
+    if (atBottom) {
+        activeSection = sections[sections.length - 1];
+    }
+
+    document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+    const navLink = document.getElementById(`nav-${activeSection}`);
+    if (navLink) navLink.classList.add('active');
 }
 
 window.addEventListener('scroll', updateActiveNav);
