@@ -85,7 +85,8 @@ const contentData = {
                     { title: "Unit Testing for Go Developers", issuer: "Udemy", tags: ["Backend", "Testes"], url: "https://amzn-s3-personal-docs-bucket.s3.us-east-1.amazonaws.com/certificates/udemy/go-unit-test.pdf" },
                     { title: "Docker: Ferramenta Essencial para Desenvolvedores", issuer: "Udemy", tags: ["DevOps"], url: "https://amzn-s3-personal-docs-bucket.s3.us-east-1.amazonaws.com/certificates/udemy/docker.pdf" },
                     { title: "AWS para Iniciantes - Aprenda e Domine a Nuvem Amazon", issuer: "Udemy", tags: ["Cloud"], url: "https://amzn-s3-personal-docs-bucket.s3.us-east-1.amazonaws.com/certificates/udemy/aws-beginer.pdf" },
-                    { title: "Formação Angular 2, 4 e 6", issuer: "Udemy", tags: ["Frontend"], url: "https://amzn-s3-personal-docs-bucket.s3.us-east-1.amazonaws.com/certificates/udemy/angular2%2B.pdf" }
+                    { title: "Formação Angular 2, 4 e 6", issuer: "Udemy", tags: ["Frontend"], url: "https://amzn-s3-personal-docs-bucket.s3.us-east-1.amazonaws.com/certificates/udemy/angular2%2B.pdf" },
+                    { title: "GitHub Actions: The Complete Guide", issuer: "Udemy", tags: ["DevOps"], url: "https://amzn-s3-personal-docs-bucket.s3.us-east-1.amazonaws.com/certificates/udemy/github-actions-complete-guide-beginner-to-expert.pdf" }
                 ]
             },
             {
@@ -225,7 +226,8 @@ const contentData = {
                     { title: "Unit Testing for Go Developers", issuer: "Udemy", tags: ["Backend", "Testing"], url: "https://amzn-s3-personal-docs-bucket.s3.us-east-1.amazonaws.com/certificates/udemy/go-unit-test.pdf" },
                     { title: "Docker: Essential Tool for Developers", issuer: "Udemy", tags: ["DevOps"], url: "https://amzn-s3-personal-docs-bucket.s3.us-east-1.amazonaws.com/certificates/udemy/docker.pdf" },
                     { title: "AWS for Beginners - Learn and Master the Amazon Cloud", issuer: "Udemy", tags: ["Cloud"], url: "https://amzn-s3-personal-docs-bucket.s3.us-east-1.amazonaws.com/certificates/udemy/aws-beginer.pdf" },
-                    { title: "Angular 2, 4, and 6 Training", issuer: "Udemy", tags: ["Frontend"], url: "https://amzn-s3-personal-docs-bucket.s3.us-east-1.amazonaws.com/certificates/udemy/angular2%2B.pdf" }
+                    { title: "Angular 2, 4, and 6 Training", issuer: "Udemy", tags: ["Frontend"], url: "https://amzn-s3-personal-docs-bucket.s3.us-east-1.amazonaws.com/certificates/udemy/angular2%2B.pdf" },
+                    { title: "GitHub Actions: The Complete Guide", issuer: "Udemy", tags: ["DevOps"], url: "https://amzn-s3-personal-docs-bucket.s3.us-east-1.amazonaws.com/certificates/udemy/github-actions-complete-guide-beginner-to-expert.pdf" }
                 ]
             },
             {
